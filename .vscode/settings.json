@@ -1,0 +1,5 @@
+{
+    "editor.columnSelection": false,
+    "editor.defaultFormatter": "svipas.prettier-plus",
+    "editor.definitionLinkOpensInPeek": true
+}

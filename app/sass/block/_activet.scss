@@ -1,0 +1,26 @@
+.activet {
+    position: absolute;
+    border-color: transparent;
+    top: 8px;
+    right: 16px;
+    width: 40px;
+    height: 40px;
+    z-index: 100;
+    &::after,
+    &::before {
+        background: #ec6f5d;
+        width: 85%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:active::after {
+        background: #ec6f5d;
+    }
+    &::before {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    &:active {
+        background: $grey_bg_alt;
+        border-radius: 12px;
+        max-width: 120%;
+    }
+}

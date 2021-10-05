@@ -1,0 +1,126 @@
+.trust {
+    // .trust__card
+    &__title {
+        line-height: 17px;
+        color: $main;
+        text-align: center;
+        padding-bottom: 29px;
+    }
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .trust__img
+    &__img {
+        width: 50%;
+        height: 90px;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 15px;
+        // .trust__img--hillel
+        &--hillel {
+            background: #1c4280;
+        }
+        // .trust__img--wannabiz
+        &--wannabiz {
+            background: #143646;
+        }
+
+        // .trust__img--tapgerine
+        &--tapgerine {
+            background: #f48b30;
+        }
+
+        // .trust__img--3d_look
+        &--3d_look {
+            background: #9e4dc3;
+            padding: 41px 30px;
+        }
+
+        // .trust__img--orangear
+        &--orangear {
+            background: #fd9339;
+            padding: 38px 30px;
+        }
+
+        // .trust__img--adtelligent
+        &--adtelligent {
+            background: #e2e2e4;
+            padding: 38px 30px;
+        }
+
+        // .trust__img--clickky
+        &--clickky {
+            background: #c71c36;
+        }
+
+        // .trust__img--ecoleasing
+        &--ecoleasing {
+            background: #dcf3f9;
+        }
+
+        // .trust__img--infratek
+        &--infratek {
+            background: #eaeaea;
+        }
+
+        // .trust__img--city-park
+        &--city-park {
+            background: #282240;
+            padding: 40px 30px;
+        }
+        // .trust__img--art-print
+        &--art-print {
+            background: #1d4568;
+            padding: 40px 30px;
+        }
+        // .trust__img--ultimate_card
+        &--ultimate_card {
+            background: #000;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .trust {
+        &__img {
+            width: 33.333%;
+            height: 120px;
+            &--wannabiz {
+                padding: 43px 30px;
+            }
+            &--tapgerine {
+                padding: 38px 30px;
+            }
+            &--3d_look {
+                padding: 41px 30px;
+            }
+
+            // .trust__img--orangear
+            &--orangear {
+                padding: 38px 30px;
+            }
+
+            // .trust__img--adtelligent
+            &--adtelligent {
+                padding: 38px 30px;
+            }
+            &--city-park {
+                padding: 40px 30px;
+            }
+            // .trust__img--art-print
+            &--art-print {
+                padding: 40px 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .trust {
+        &__img {
+            width: 25%;
+        }
+    }
+}

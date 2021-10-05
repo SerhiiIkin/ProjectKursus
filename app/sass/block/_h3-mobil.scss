@@ -1,0 +1,14 @@
+.h3-mobil {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $main_soft;
+}
+
+@media (min-width: 768px) {
+    .h3-mobil {
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: normal;
+    }
+}

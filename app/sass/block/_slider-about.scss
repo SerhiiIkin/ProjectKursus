@@ -1,0 +1,40 @@
+.slider-about {
+    padding: 30px 0 33px;
+    border-bottom: 4px solid $grey_separator;
+    &__title {
+        padding-bottom: 30px;
+        text-align: center;
+        color: $main;
+    }
+    &__item {
+        padding: 0 10px;
+    }
+    &__item-container {
+        padding: 13px 0;
+        background: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px;
+        max-width: 177px;
+        margin: 0 auto;
+        height: 57px;
+        img {
+            height: 32px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .slider-about {
+        padding: 30px 0 41px;
+        &__item-container {
+            max-width: 300px;
+            padding: 25px 0;
+            height: 109px;
+            img {
+                height: 60px;
+            }
+        }
+    }
+}

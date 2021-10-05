@@ -1,0 +1,19 @@
+.quality {
+    &__text {
+        padding-bottom: 20px;
+    }
+
+    padding-top: 14px;
+    padding-bottom: 40px;
+}
+
+@media (min-width: 992px) {
+    .quality {
+        padding: 80px 0 71px 111px;
+        display: flex;
+        &__content {
+            padding-right: 40px;
+            max-width: 683px;
+        }
+    }
+}

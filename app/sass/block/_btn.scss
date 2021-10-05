@@ -1,0 +1,21 @@
+.btn {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: $white;
+    border-radius: 12px;
+    &--blue {
+        &:hover {
+            box-shadow: 0 0 30px rgba(36, 163, 255, 0.5);
+            background: $accent_active_hover;
+        }
+        &:active {
+            background: $accent_active_active;
+        }
+
+        box-shadow: 0 0 20px rgba(36, 163, 255, 0.5);
+        background: $accent_active;
+    }
+}

@@ -1,0 +1,13 @@
+.hero-mobil {
+    font-size: 32px;
+    line-height: 38px;
+    color: $accent;
+    font-weight: bold;
+}
+
+@media (min-width: 992px) {
+    .hero-mobil {
+        font-size: 42px;
+        line-height: 50px;
+    }
+}

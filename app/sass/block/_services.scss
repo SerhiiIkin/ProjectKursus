@@ -1,0 +1,163 @@
+.services {
+    // .services__container
+    &__container {
+        display: flex;
+        flex-direction: column;
+    }
+    // .services__top-title
+    &__top-title {
+        color: $white;
+        opacity: 0.5;
+        position: relative;
+        display: inline-block;
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 84px;
+            top: 4px;
+            background: $white;
+            width: 7px;
+            height: 2px;
+            transform: rotate(45deg);
+        }
+        &::before {
+            top: 9px;
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            color: $accent;
+            opacity: 1;
+        }
+        &:hover::after,
+        &:hover::before {
+            background: $accent;
+        }
+    }
+
+    // .services__title
+    &__title {
+        margin-bottom: 40px;
+    }
+
+    // .services__items
+    &__items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .services__block
+    &__block {
+        padding-bottom: 40px;
+        &:last-child {
+            padding-bottom: 7px;
+        }
+        &__subtitle {
+            &:hover {
+                color: $accent;
+            }
+
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding-left: 74px;
+            padding-bottom: 27px;
+            &::before {
+                content: "";
+                position: absolute;
+                width: 64px;
+                height: 64px;
+                left: 0;
+                border-radius: 18px;
+            }
+            &--it::before {
+                background:
+                    $white url("../img/icons/services_it.svg") center
+                    center no-repeat;
+            }
+            &--ko::before {
+                background:
+                    $white url("../img/icons/services_komp.svg") center
+                    center no-repeat;
+            }
+            &--struk::before {
+                background:
+                    $white url("../img/icons/services_struk.svg") center
+                    center no-repeat;
+            }
+            &--build::before {
+                background:
+                    $white url("../img/icons/services_build.svg") center
+                    center no-repeat;
+            }
+            &--protect::before {
+                background:
+                    $white url("../img/icons/services_protect.svg")
+                    center center no-repeat;
+            }
+            &--court::before {
+                background:
+                    $white url("../img/icons/services_court.svg") center
+                    center no-repeat;
+            }
+        }
+        &__text {
+            font-size: 16px;
+            line-height: 22px;
+            color: $white;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .services {
+        &__title {
+            margin-bottom: 0;
+        }
+        &__items {
+            margin: 0 -20px;
+            padding-top: 51px;
+            padding-left: 20px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-bottom: 39px;
+        }
+        &__block {
+            height: 100%;
+            width: 50%;
+            padding-top: 40px;
+            padding-right: 10px;
+            &:last-child,
+            &:nth-child(4),
+            &:nth-child(5) {
+                padding-bottom: inherit;
+            }
+            &__subtitle {
+                padding-bottom: 18px;
+                padding-left: 0;
+                padding-top: 51px;
+                &::before {
+                    top: calc(9% - 70px);
+                    width: 92px;
+                    height: 92px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .services {
+        &__block {
+            width: 33.333%;
+            padding-top: 0;
+            padding-bottom: 113px;
+        }
+        &__title {
+            margin-bottom: 80px;
+        }
+        &__items {
+            padding-bottom: 5px;
+        }
+    }
+}

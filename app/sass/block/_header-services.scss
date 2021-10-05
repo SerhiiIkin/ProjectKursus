@@ -1,0 +1,47 @@
+.header__container--services {
+    &::before,
+    &::after {
+        display: none;
+    }
+}
+.header {
+    &__logo-bread {
+        display: flex;
+        padding-top: 17px;
+    }
+    &__logo--services {
+        margin: 0;
+    }
+    &__menu-link--services {
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: $accent;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .header {
+        &__container--services {
+            padding-top: 30px;
+            padding-left: 6px;
+        }
+        &__top--services {
+            padding-top: 10px;
+            padding-right: 12px;
+        }
+        &__logo-bread {
+            padding-top: 18px;
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
+        &__menu--services {
+            padding-right: 12px;
+        }
+    }
+}

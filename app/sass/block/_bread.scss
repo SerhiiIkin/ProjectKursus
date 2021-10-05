@@ -1,0 +1,45 @@
+.bread {
+    font-size: 19px;
+    line-height: 22px;
+    color: $white;
+    position: relative;
+    margin-left: 13px;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 24px;
+        transform: translateY(-50%);
+    }
+    &::before {
+        background: url("../img/icons/slash_before.svg") 0 0 no-repeat;
+        left: -11px;
+        width: 11px;
+    }
+    &::after {
+        background: url("../img/icons/slash_after.svg") 0 0 no-repeat;
+        right: -21px;
+        width: 21px;
+    }
+}
+
+@media (min-width: 768px) {
+    .bread {
+        margin-left: 25px;
+        font-size: 38px;
+        line-height: 45px;
+        &::before,
+        &::after {
+            height: 47px;
+        }
+        &::before {
+            left: -22px;
+            width: 22px;
+        }
+        &::after {
+            width: 42px;
+            right: -42px;
+        }
+    }
+}

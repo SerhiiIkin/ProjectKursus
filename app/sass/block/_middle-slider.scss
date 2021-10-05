@@ -1,0 +1,105 @@
+.middle-slider {
+    &__slide-item {
+        background: $grey_bg;
+        display: grid;
+        grid-template-columns: auto 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        padding: 20px 20px 10px 20px;
+        border-radius: 12px;
+    }
+    &-top {
+        grid-row: 1/2;
+        grid-column: 1/4;
+        display: flex;
+        align-items: center;
+    }
+    &__content {
+        grid-row: 3/4;
+        grid-column: 1/2;
+        padding-top: 14px;
+    }
+    &__top-title {
+        display: inline-block;
+        color: $accent_active;
+        font-weight: bold;
+        position: relative;
+        &:hover {
+            color: $accent;
+        }
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            left: 92px;
+            top: 6px;
+            background: $accent_active;
+            width: 7px;
+            height: 2px;
+            transform: rotate(45deg);
+        }
+        &::before {
+            top: 10px;
+            transform: rotate(-45deg);
+        }
+        &:hover::after,
+        &:hover::before {
+            background: $accent;
+        }
+    }
+    &__text {
+        grid-row: 2/3;
+        grid-column: 1/4;
+    }
+    // .swiper-slide__name
+    &__name {
+        padding-bottom: 5px;
+    }
+    &__who {
+        justify-content: center;
+        grid-row: 3/4;
+        grid-column: 2/4;
+        padding-left: 10px;
+        color: $grey_text;
+        padding-top: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .middle-slider {
+        height: auto;
+        &__slide {
+            grid-template-columns: 32% auto;
+        }
+        &__slide-item {
+            padding: 0;
+        }
+        &-top {
+            grid-column: 2/4;
+            grid-row: 1/2;
+            padding-left: 39px;
+            padding-top: 41px;
+        }
+        &__text {
+            grid-column: 2/4;
+            grid-row: 2/3;
+            padding-left: 41px;
+            padding-bottom: 22px;
+        }
+        &__who {
+            grid-column: 2/4;
+            grid-row: 3/4;
+            padding-left: 40px;
+            padding-bottom: 173px;
+            padding-top: 0;
+        }
+        &__content {
+            grid-column: 1/2;
+            grid-row: 1/-1;
+            padding-top: 0;
+            width: 410px;
+        }
+        &__name {
+            padding-top: 0;
+        }
+    }
+}

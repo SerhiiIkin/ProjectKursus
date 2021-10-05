@@ -1,0 +1,37 @@
+.team {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__text {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 42px;
+        letter-spacing: 20px;
+        text-transform: uppercase;
+        color: $white;
+        opacity: 0.8;
+        text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    }
+
+    background:
+        url("../img/team-image.jpg") center 0/cover no-repeat,
+        linear-gradient(264.71deg, #f01432 0%, #323264 29.69%);
+    height: 290px;
+}
+
+@media (min-width: 992px) {
+    .team {
+        height: 438px;
+        &__text {
+            font-size: 96px;
+            line-height: 113px;
+            letter-spacing: 63px;
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .team {
+        background-size: 1440px 438px;
+    }
+}

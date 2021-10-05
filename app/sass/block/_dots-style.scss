@@ -1,0 +1,39 @@
+.dots-style {
+    margin: 0;
+    margin-top: -10px;
+    padding: 0;
+    list-style: none;
+    color: $accent_active;
+    display: flex;
+    justify-content: center;
+    li {
+        margin: 0 7px;
+    }
+    button {
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        background: rgba(36, 163, 255, 0.2);
+        border-radius: 50%;
+        border: none;
+        font-size: 0;
+    }
+    & .slick-active {
+        button {
+            background: $accent_active;
+        }
+    }
+    &--middle {
+        margin-top: 24px;
+        margin-bottom: 10px;
+    }
+    &--about {
+        margin-top: 19px;
+    }
+}
+
+@media (min-width: 992px) {
+    .dots-style {
+        margin-top: 21px;
+    }
+}

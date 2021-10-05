@@ -1,0 +1,127 @@
+.consecutive {
+    &__comp {
+        display: none;
+    }
+    // .consecutive__container
+    &__container {
+        color: $white;
+        padding-bottom: 44px;
+        padding-top: 42px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .consecutive__title
+    &__title {
+        padding-bottom: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $gradient_red_text;
+    }
+
+    // .consecutive__subtitle
+    &__subtitle {
+        font-size: 22px;
+        line-height: 26px;
+        padding-bottom: 15px;
+    }
+
+    // .consecutive__text
+    &__text {
+        font-size: 18px;
+        line-height: 26px;
+        padding-bottom: 20px;
+    }
+
+    // .consecutive__points-container
+    &__points-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .consecutive__point
+    &__point {
+        margin: 7px;
+        border-radius: 50%;
+        background-color: $accent_active;
+        opacity: 0.2;
+        width: 16px;
+        height: 16px;
+        &:active {
+            opacity: 1;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .consecutive {
+        &__slider {
+            display: none;
+        }
+        &__container {
+            padding: 102px 0 10px 10px;
+        }
+        // .consecutive__comp
+        &__comp {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 114px;
+        }
+
+        // .consecutive__comp-buttons
+        &__comp-buttons {
+            display: flex;
+            flex-direction: column;
+            width: 43%;
+        }
+
+        // .consecutive__button
+        &__button {
+            border: 0;
+            border-right: 4px solid $grey_separator;
+            display: flex;
+            justify-content: end;
+            padding: 0 46px 22px 10px;
+            font-size: 42px;
+            line-height: 50px;
+            outline: none;
+            background: transparent;
+            cursor: pointer;
+            text-align: right;
+            color: $grey_text;
+            &:hover {
+                color: $accent;
+            }
+            &:last-child {
+                padding-bottom: 0;
+            }
+        }
+
+        // .consecutive__content
+        &__content {
+            width: 55%;
+            align-self: center;
+            padding: 0 10px;
+        }
+
+        // .consecutive__subtitle
+        &__subtitle {
+            font-size: 32px;
+            line-height: 38px;
+        }
+
+        // .consecutive__text
+        &__text {
+            font-size: 21px;
+            line-height: 30px;
+            color: $white;
+        }
+        // .consecutive__poslid
+        &__block {
+            display: none;
+        }
+    }
+}

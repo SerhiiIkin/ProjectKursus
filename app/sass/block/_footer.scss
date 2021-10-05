@@ -1,0 +1,212 @@
+.footer {
+    // .footer__container
+    &__container {
+        padding-bottom: 118px;
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: right;
+    }
+
+    // .footer__addres
+    &__addres {
+        grid-area: top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__street {
+        color: $main;
+        padding-bottom: 10px;
+    }
+    // .footer__map
+    &__map {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $accent_active;
+        padding-bottom: 20px;
+        text-align: start;
+        &:hover {
+            color: $accent;
+        }
+    }
+    &__fb {
+        grid-area: mid;
+        grid-row: 2/3;
+        grid-column: 1/2;
+        align-self: center;
+        align-content: center;
+        padding-bottom: 20px;
+        svg {
+            &:hover {
+                fill: $accent;
+            }
+
+            fill: $accent_active;
+        }
+    }
+    // .footer__tel
+    &__tel {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    // .footer__mail
+    &__mail {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        color: $accent_active;
+        padding: 20px 0;
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    // .footer__tob
+    &__tob {
+        grid-area: buttom;
+        max-width: 335px;
+        font-weight: 500;
+        color: $grey_text;
+        text-align: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        &__container {
+            padding-top: 7px;
+            padding-bottom: 81px;
+            display: grid;
+            grid-column: 1fr;
+            grid-template-rows: auto auto auto;
+            grid-template-areas:
+                "top"
+                "mid"
+                "buttom";
+        }
+        &__street {
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0;
+            &::before {
+                top: 50%;
+                transform: translateY(-50%);
+                content: "";
+                position: absolute;
+                right: -13px;
+                background: $grey_text;
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+            }
+        }
+        &__map {
+            padding-left: 20px;
+            padding-bottom: 0;
+        }
+        &__addres {
+            flex-direction: row;
+            align-items: center;
+            grid-area: top;
+            grid-column: 1/3;
+            padding-bottom: 31px;
+        }
+        &__tob {
+            max-width: 100%;
+            grid-column: 1/3;
+            text-align: left;
+        }
+        &__fb,
+        &__mail {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+        &__tel {
+            grid-column: 1/3;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 19px;
+            a :first-child {
+                margin-right: 22px;
+            }
+            a:nth-child(2) {
+                position: relative;
+                color: $main_alt;
+                margin-right: 20px;
+                &:hover {
+                    color: $accent;
+                }
+                &::before,
+                &::after {
+                    top: 50%;
+                    transform: translateY(-50%);
+                    content: "";
+                    position: absolute;
+                    background: $grey_text;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                }
+                &::after {
+                    right: -13px;
+                }
+                &::before {
+                    left: -13px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .footer {
+        &__container {
+            padding-top: 5px;
+            padding-bottom: 50px;
+            grid-column: 1fr 1fr;
+            grid-template-rows: auto auto;
+        }
+        &__street {
+            &::before {
+                right: -35px;
+            }
+        }
+        &__map {
+            padding-left: 48px;
+        }
+        &__mobtel {
+            color: $main_alt;
+        }
+        &__tob {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            text-align: right;
+        }
+        &__tel {
+            grid-column: 1/2;
+            grid-row: 2/3;
+        }
+        &__addres {
+            padding-top: 20px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding-bottom: 19px;
+        }
+        &__mail {
+            margin-left: 16px;
+        }
+    }
+}

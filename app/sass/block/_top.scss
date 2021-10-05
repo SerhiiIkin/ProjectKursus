@@ -1,0 +1,31 @@
+.top {
+    background: $gradient_soft;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 35px;
+    position: relative;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: calc(20px - 0%);
+        right: calc(20px - 0%);
+        height: 10px;
+        border-radius: 0 0 12px 12px;
+    }
+    &::before {
+        background-color: #e7e7f2;
+        bottom: -20px;
+        left: calc(40px - 0%);
+        right: calc(40px - 0%);
+    }
+    &::after {
+        background-color: #cacadb;
+        bottom: -10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .top {
+        margin-bottom: 0;
+    }
+}
