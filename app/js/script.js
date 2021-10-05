@@ -103,9 +103,9 @@ hslider[3].addEventListener("click", function () {
 });
 }
 var src = window.location.href;
-if (src == "/services.html" || "/services.html#") {
-    modal();
-} else
 if (src == "/index.html" || "/index.html#servic" || "http://localhost:3000/" ) {
     slideHoved();
+} else
+if (src == "/services.html" || "/services.html#") {
+    modal();
 }
