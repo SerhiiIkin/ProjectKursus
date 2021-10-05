@@ -1,3 +1,25 @@
+$(document).ready(function () {
+
+    if ($('.slide-js-achievement').length) {
+        aboutSlide();
+    };
+    if ($('.consecutive-wrapper').length) {
+        indexSlide();
+    };
+    if ($('.middle-slider').length) {
+        indexSlideMid();
+    };
+    if ($('.header__burger-menu').length) {
+        menu();
+    };
+    if ($('.consecutive__button').length) {
+        slideHoved();
+    };
+    if ($('.services__button').length) {
+        modal();
+    };
+});
+var aboutSlide = function () {
 $('.slide-js-achievement').slick({
     infinite: true,
     arrows: false,
@@ -23,6 +45,8 @@ $('.slide-js-achievement').slick({
     },
     ]
 });
+}
+var indexSlide = function() {
 $('.consecutive-wrapper').slick({
     infinite: true,
     arrows: false,
@@ -32,16 +56,19 @@ $('.consecutive-wrapper').slick({
     slidesToScroll: 1,
     dotsClass: "dots-style",
 });
-$('.middle-slider').slick({
-    infinite: true,
-    arrows: false,
-    dots: true,
-    adaptiveHeight: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    dotsClass: "dots-style dots-style--middle",
-});
-var menu = function Menu(menuBurger,list,meny) {
+}
+var indexSlideMid = function () {
+    $('.middle-slider').slick({
+        infinite: true,
+        arrows: false,
+        dots: true,
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dotsClass: "dots-style dots-style--middle",
+    });
+}
+var menu = function() {
     menuBurger = document.querySelector(".header__burger-menu");
     menuBurger.addEventListener("click", function openNav() {
     list = document.querySelector(".header__burger-menu-button");
@@ -51,8 +78,8 @@ var menu = function Menu(menuBurger,list,meny) {
     document.body.classList.toggle("lock");
 });
 }
-menu();
-var slideHoved = function SlideHoved() {
+
+var slideHoved = function () {
     const hslider = document.querySelectorAll(".consecutive__button");
     const blocks = document.querySelectorAll(".consecutive__block");
     for (let i = 0; i < blocks.length; i++) {
@@ -87,7 +114,7 @@ var slideHoved = function SlideHoved() {
         hslider[3].classList.remove("white");
     });
 }
-var modal = function Modal() {
+var modal = function() {
     const openMod = document.querySelector(".services__button");
     openMod.addEventListener("click", function openModW() {
         modalWin = document.querySelector(".modal");
@@ -102,25 +129,3 @@ var modal = function Modal() {
         document.body.classList.remove("lock");
     })
 }
-var src = window.location.href;
-// if (src == "http://localhost:3000/services.html" || "http://localhost:3000/services.html#") {
-//     modal();
-// }   else
-// if (src == "http://localhost:3000/index.html"|| "http://localhost:3000/") {
-//     slideHoved();
-// }
-
-    switch (src) {
-        case "http://localhost:3000/services.html":
-            modal();
-            break;
-        case "http://localhost:3000/index.html":
-            slideHoved();
-            break;
-        case "http://localhost:3000/":
-            slideHoved();
-        break;
-
-        default:
-            break;
-    }
