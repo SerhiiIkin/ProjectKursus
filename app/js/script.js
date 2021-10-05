@@ -103,24 +103,24 @@ var modal = function Modal() {
     })
 }
 var src = window.location.href;
-    var src = window.location.href;
-if (src == "http://localhost:3000/services.html") {
-    modal();
-} else
-if (src == "http://localhost:3000/index.html") {
-    slideHoved();
-}
-    // switch (src) {
-    //     case "/services.html":
-    //         modal();
-    //         break;
-    //     case "/index.html":
-    //         slideHoved();
-    //         break;
-    //     case "http://localhost:3000/":
-    //         slideHoved();
-    //     break;
+// if (src == "http://localhost:3000/services.html" || "http://localhost:3000/services.html#") {
+//     modal();
+// }   else
+// if (src == "http://localhost:3000/index.html"|| "http://localhost:3000/") {
+//     slideHoved();
+// }
 
-    //     default:
-    //         break;
-    // }
+    switch (src) {
+        case "http://localhost:3000/services.html":
+            modal();
+            break;
+        case "http://localhost:3000/index.html":
+            slideHoved();
+            break;
+        case "http://localhost:3000/":
+            slideHoved();
+        break;
+
+        default:
+            break;
+    }
