@@ -57,60 +57,68 @@ var menu = function Menu(menuBurger,list,meny) {
 });
 }
 menu();
+var slideHoved = function SlideHoved() {
+    const hslider = document.querySelectorAll(".consecutive__button");
+    const blocks = document.querySelectorAll(".consecutive__block");
+    for (let i = 0; i < blocks.length; i++) {
+        const block = blocks[i];
+        for (let index = 0; index < hslider.length; index++) {
+            const hslide = hslider[index];
+            hslide.addEventListener("click", function () {
+                block.classList.remove("block-open");
+                hslider[index].classList.toggle("white");
+                hslider[i].classList.remove("red");
+            });
+        }
+    }
+    hslider[0].addEventListener("click", function () {
+        blocks[0].classList.toggle("block-open");
+        hslider[0].classList.remove("white");
+        hslider[0].classList.toggle("red");
+    });
+    hslider[1].addEventListener("click", function () {
+        blocks[1].classList.toggle("block-open");
+        hslider[1].classList.toggle("red");
+        hslider[1].classList.remove("white");
+    });
+    hslider[2].addEventListener("click", function () {
+        blocks[2].classList.toggle("block-open");
+        hslider[2].classList.toggle("red");
+        hslider[2].classList.remove("white");
+    });
+    hslider[3].addEventListener("click", function () {
+        blocks[3].classList.toggle("block-open");
+        hslider[3].classList.toggle("red");
+        hslider[3].classList.remove("white");
+    });
+}
 var modal = function Modal() {
     const openMod = document.querySelector(".services__button");
     openMod.addEventListener("click", function openModW() {
-    modalWin = document.querySelector(".modal");
-    modalWin.classList.remove("close");
-    modalWin.classList.toggle("open");
-    document.body.classList.toggle("lock");
+        modalWin = document.querySelector(".modal");
+        modalWin.classList.remove("close");
+        modalWin.classList.toggle("open");
+        document.body.classList.toggle("lock");
     })
     const closeMod = document.querySelector(".modal__close");
-    closeMod.addEventListener("click" , function closeModalW() {
-    modalWin.classList.toggle("close");
-    modalWin.classList.remove("open");
-    document.body.classList.remove("lock");
+    closeMod.addEventListener("click", function closeModalW() {
+        modalWin.classList.toggle("close");
+        modalWin.classList.remove("open");
+        document.body.classList.remove("lock");
     })
 }
-var slideHoved = function SlideHoved() {
-const hslider = document.querySelectorAll(".consecutive__button");
-const blocks = document.querySelectorAll(".consecutive__block");
-for (let i = 0; i < blocks.length; i++) {
-    const block = blocks[i];
-    for (let index = 0; index < hslider.length; index++) {
-        const hslide = hslider[index];
-        hslide.addEventListener("click", function () {
-            block.classList.remove("block-open");
-            hslider[index].classList.toggle("white");
-            hslider[i].classList.remove("red");
-        });
+    var src = window.location.href;
+    switch (src) {
+        case "http://localhost:3000/services.html":
+            modal();
+            break;
+        case "http://localhost:3000/index.html":
+            slideHoved();
+            break;
+        case "http://localhost:3000/":
+            slideHoved();
+        break;
+
+        default:
+            break;
     }
-}
-hslider[0].addEventListener("click", function () {
-    blocks[0].classList.toggle("block-open");
-    hslider[0].classList.remove("white");
-    hslider[0].classList.toggle("red");
-});
-hslider[1].addEventListener("click", function () {
-    blocks[1].classList.toggle("block-open");
-    hslider[1].classList.toggle("red");
-    hslider[1].classList.remove("white");
-});
-hslider[2].addEventListener("click", function () {
-    blocks[2].classList.toggle("block-open");
-    hslider[2].classList.toggle("red");
-    hslider[2].classList.remove("white");
-});
-hslider[3].addEventListener("click", function () {
-    blocks[3].classList.toggle("block-open");
-    hslider[3].classList.toggle("red");
-    hslider[3].classList.remove("white");
-});
-}
-var src = window.location.href;
-if (src == "/index.html" || "/index.html#servic" || "http://localhost:3000/" ) {
-    slideHoved();
-} else
-if (src == "/services.html" || "/services.html#") {
-    modal();
-}
