@@ -109,10 +109,10 @@ var modal = function Modal() {
 }
     var src = window.location.href;
     switch (src) {
-        case "http://localhost:3000/services.html":
+        case "/services.html":
             modal();
             break;
-        case "http://localhost:3000/index.html":
+        case "/index.html":
             slideHoved();
             break;
         case "http://localhost:3000/":
