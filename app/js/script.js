@@ -106,6 +106,6 @@ var src = window.location.href;
 if (src == "http://localhost:3000/services.html") {
     modal();
 } else
-if (src == "http://localhost:3000/index.html" && "http://localhost:3000" ) {
+if (src == "http://localhost:3000/index.html" || "http://localhost:3000" ) {
     slideHoved();
 }
