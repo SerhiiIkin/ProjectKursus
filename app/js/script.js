@@ -13,12 +13,13 @@ $(document).ready(function () {
         menu();
     };
     if ($('.consecutive__button').length) {
-        slideHoved();
+        conSlide();
     };
     if ($('.services__button').length) {
         modal();
     };
 });
+
 var aboutSlide = function () {
 $('.slide-js-achievement').slick({
     infinite: true,
@@ -46,6 +47,7 @@ $('.slide-js-achievement').slick({
     ]
 });
 }
+
 var indexSlide = function() {
 $('.consecutive-wrapper').slick({
     infinite: true,
@@ -57,6 +59,7 @@ $('.consecutive-wrapper').slick({
     dotsClass: "dots-style",
 });
 }
+
 var indexSlideMid = function () {
     $('.middle-slider').slick({
         infinite: true,
@@ -68,6 +71,7 @@ var indexSlideMid = function () {
         dotsClass: "dots-style dots-style--middle",
     });
 }
+
 var menu = function() {
     menuBurger = document.querySelector(".header__burger-menu");
     menuBurger.addEventListener("click", function openNav() {
@@ -79,53 +83,65 @@ var menu = function() {
 });
 }
 
-var slideHoved = function () {
-    const hslider = document.querySelectorAll(".consecutive__button");
-    const blocks = document.querySelectorAll(".consecutive__block");
-    for (let i = 0; i < blocks.length; i++) {
-        const block = blocks[i];
-        for (let index = 0; index < hslider.length; index++) {
-            const hslide = hslider[index];
-            hslide.addEventListener("click", function () {
-                block.classList.remove("block-open");
-                hslider[index].classList.toggle("white");
-                hslider[i].classList.remove("red");
-            });
-        }
-    }
-    hslider[0].addEventListener("click", function () {
-        blocks[0].classList.toggle("block-open");
-        hslider[0].classList.remove("white");
-        hslider[0].classList.toggle("red");
-    });
-    hslider[1].addEventListener("click", function () {
-        blocks[1].classList.toggle("block-open");
-        hslider[1].classList.toggle("red");
-        hslider[1].classList.remove("white");
-    });
-    hslider[2].addEventListener("click", function () {
-        blocks[2].classList.toggle("block-open");
-        hslider[2].classList.toggle("red");
-        hslider[2].classList.remove("white");
-    });
-    hslider[3].addEventListener("click", function () {
-        blocks[3].classList.toggle("block-open");
-        hslider[3].classList.toggle("red");
-        hslider[3].classList.remove("white");
-    });
-}
 var modal = function() {
-    const openMod = document.querySelector(".services__button");
+    var openMod = document.querySelector(".services__button");
     openMod.addEventListener("click", function openModW() {
         modalWin = document.querySelector(".modal");
         modalWin.classList.remove("close");
         modalWin.classList.toggle("open");
         document.body.classList.toggle("lock");
     })
-    const closeMod = document.querySelector(".modal__close");
+    var closeMod = document.querySelector(".modal__close");
     closeMod.addEventListener("click", function closeModalW() {
         modalWin.classList.toggle("close");
         modalWin.classList.remove("open");
         document.body.classList.remove("lock");
     })
+}
+var conSlide = function () {
+var allBtn = document.querySelectorAll(".consecutive__button");
+var blocks = document.querySelectorAll(".consecutive__block");
+    var btnCon = function () {
+    var index;
+    for ( index = 0; index < allBtn.length; index++) {
+        if (index == 0) {
+            allBtn[0].addEventListener("click", function () {
+            clear();
+            allBtn[0].classList.toggle("red");
+            blocks[0].classList.toggle("block-open");
+            });
+            };
+        if (index == 1) {
+            allBtn[1].addEventListener("click", function () {
+            clear();
+            allBtn[1].classList.toggle("red");
+            blocks[1].classList.toggle("block-open");
+            });
+            };
+        if (index == 2) {
+
+            allBtn[2].addEventListener("click", function () {
+            clear();
+            allBtn[2].classList.toggle("red");
+            blocks[2].classList.toggle("block-open");
+            });
+            };
+        if (index == 3) {
+            allBtn[3].addEventListener("click", function () {
+            clear();
+            allBtn[3].classList.toggle("red");
+            blocks[3].classList.toggle("block-open");
+            });
+            };
+    }
+    index = 0;
+    }
+    var clear = function () {
+    var i;
+        for (i = 0; i < allBtn.length; i++) {
+            allBtn[i].classList.remove("red");
+            blocks[i].classList.remove("block-open");
+        }
+    }
+btnCon();
 }

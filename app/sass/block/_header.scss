@@ -21,14 +21,13 @@
 
     // .header__burger-menu
     &__burger-menu {
-        margin-top: 21px; //14
+        margin: 21px 10px 25px 0;
         width: 32px;
         height: 32px;
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 3px;
-        margin-bottom: 25px;
         grid-area: menu;
         justify-self: end;
         &:active {

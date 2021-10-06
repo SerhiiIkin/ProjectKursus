@@ -95,7 +95,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header__burger-menu {
-  margin-top: 21px;
+  margin: 21px 10px 25px 0;
   width: 32px;
   height: 32px;
   display: -webkit-box;
@@ -108,7 +108,6 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 3px;
-  margin-bottom: 25px;
   grid-area: menu;
   justify-self: end;
 }
@@ -1999,6 +1998,10 @@ input[type="radio"].visually-hidden {
 
 .modal__title {
   max-width: 300px;
+  color: #f0145a;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
 }
 
 .modal__container {
@@ -2007,8 +2010,7 @@ input[type="radio"].visually-hidden {
   top: 2%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  max-width: 547px;
-  min-width: 375px;
+  min-width: 325px;
   padding: 5px;
   background: #f5f5fa;
   position: absolute;
@@ -2151,11 +2153,13 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: 768px) {
   .modal__title {
+    font-size: 32px;
+    line-height: 38px;
     max-width: 500px;
   }
   .modal__container {
     padding: 20px;
-    width: 500px;
+    min-width: 525px;
   }
   .modal__list li {
     padding-bottom: 20px;
@@ -2326,8 +2330,8 @@ input[type="radio"].visually-hidden {
 .activet {
   position: absolute;
   border-color: transparent;
-  top: 8px;
-  right: 16px;
+  top: 0;
+  right: 0;
   width: 40px;
   height: 40px;
   z-index: 100;

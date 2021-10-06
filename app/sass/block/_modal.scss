@@ -9,14 +9,17 @@
     overflow-y: auto;
     &__title {
         max-width: 300px;
+        color: $accent;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 30px;
     }
     &__container {
         left: 50%;
         z-index: 201;
         top: 2%;
         transform: translateX(-50%);
-        max-width: 547px;
-        min-width: 375px;
+        min-width: 325px;
         padding: 5px;
         background: $grey_bg;
         position: absolute;
@@ -116,11 +119,13 @@
 @media (min-width: 768px) {
     .modal {
         &__title {
+            font-size: 32px;
+            line-height: 38px;
             max-width: 500px;
         }
         &__container {
             padding: 20px;
-            width: 500px;
+            min-width: 525px;
         }
         &__list {
             li {

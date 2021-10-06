@@ -9,6 +9,7 @@ const gulp = require('gulp'),
     htmlMin = require('gulp-htmlmin'),
     imagemin = require("gulp-imagemin"),
     svgstore = require("gulp-svgstore"),
+    uglify = require('gulp-uglify'),
     webp = require("gulp-webp"),
     del = require('del'),
     concat = require('gulp-concat'),
@@ -70,9 +71,6 @@ gulp.task('clean', function (done) {
 gulp.task('js-prod', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js', 'node_modules/slick-carousel/slick/slick.min.js', 'app/js/script.js'])
         .pipe(concat('all.min.js'))
-        .pipe(babel({
-            presets: ['@babel/env']
-        }))
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
