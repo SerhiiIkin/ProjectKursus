@@ -11,8 +11,11 @@
         max-width: 300px;
         color: $accent;
         font-weight: bold;
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 22px;
+        line-height: 26px;
+        &--contact {
+            max-width: 100%;
+        }
     }
     &__container {
         border-radius: 12px;
@@ -20,10 +23,19 @@
         z-index: 201;
         top: 2%;
         transform: translateX(-50%);
-        min-width: 325px;
-        padding: 5px;
+        min-width: 335px;
+        padding: 20px;
         background: $grey_bg;
         position: absolute;
+        &--contact {
+            position: relative;
+            transform: none;
+            border-radius: 0;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            min-width: initial;
+        }
     }
     &__close {
         position: absolute;
@@ -72,6 +84,9 @@
                 background: $main;
             }
         }
+        &--contact {
+            display: none;
+        }
     }
     &__input {
         height: 47px;
@@ -80,21 +95,21 @@
         }
     }
     &__message {
-        height: 180px;
-        &::placeholder {
-            padding-left: 10px;
-        }
+        padding: 20px 0 180px 10px;
     }
     &__list {
         list-style: none;
         padding: 0;
         li {
             margin: 0 auto;
-            padding-bottom: 5px;
+            padding-bottom: 20px;
             &:first-child {
                 padding: 0;
                 margin: 0;
-                margin-bottom: 5px;
+                padding-bottom: 20px;
+            }
+            &:nth-child(5) {
+                padding-bottom: 8px;
             }
             &:last-child {
                 text-align: center;
@@ -107,6 +122,10 @@
         border: none;
         border-radius: 8px;
         width: 100%;
+        background-color: $white;
+        &:focus {
+            outline: 2px solid $accent;
+        }
         &::placeholder {
             font-size: 18px;
             line-height: 26px;
@@ -120,6 +139,15 @@
     }
     &__btn {
         padding: 14px 67px;
+    }
+    &--contact {
+        position: relative;
+        overflow-y: initial;
+        max-width: 527px;
+        margin: 0 auto;
+        background: none;
+        margin-bottom: 40px;
+        z-index: 0;
     }
 }
 
@@ -143,6 +171,14 @@
                     margin-bottom: 20px;
                 }
             }
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .modal {
+        &--contact {
+            top: 0;
         }
     }
 }

@@ -1,5 +1,4 @@
 .top--services {
-    margin-bottom: 18px;
     border-radius: 0 0 12px 12px;
     background:
         url("../img/bg_servic.jpg") top center no-repeat,
@@ -10,8 +9,8 @@
             #643e72 85.46%
         ),
         linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%);
-    background-size: 1400px 500px;
-    padding-bottom: 80px;
+    padding-bottom: 98px;
+    background-size: 1500px 50%;
 }
 
 @media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
@@ -25,6 +24,6 @@
                 #643e72 85.46%
             ),
             linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%);
-        background-size: 1400px 500px;
+        background-size: 1500px 50%;
     }
 }

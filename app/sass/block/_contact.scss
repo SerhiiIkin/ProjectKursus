@@ -1,0 +1,82 @@
+.contact {
+    &__links {
+        font-size: 21px;
+        line-height: 30px;
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0 40px;
+        justify-content: start;
+        max-width: 415px;
+        margin: 0 auto;
+    }
+    &__street {
+        font-weight: 500;
+        color: $main;
+        max-width: 220px;
+        margin-bottom: 20px;
+    }
+    &__telandmail {
+        border-bottom: 4px solid $grey_separator;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        border-top: 4px solid $grey_separator;
+    }
+    &__mobtel {
+        a {
+            color: $main_alt;
+        }
+
+        margin-bottom: 20px;
+    }
+    &__mail {
+        a {
+            color: $accent_active;
+            &:hover {
+                color: $accent;
+            }
+        }
+
+        margin-bottom: 20px;
+    }
+    &__facebok {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $accent_active;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        max-width: 220px;
+        svg {
+            margin-right: 10px;
+            fill: $grey_text;
+        }
+        &:hover {
+            color: $accent;
+            svg {
+                fill: $accent;
+            }
+        }
+    }
+    &__map {
+        width: 100%;
+        min-height: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact {
+        &__content {
+            padding: 80px 20px;
+            display: flex;
+            justify-content: space-around;
+            margin: 0 auto;
+        }
+        &__links {
+            margin: 0;
+            width: 100%;
+        }
+    }
+}

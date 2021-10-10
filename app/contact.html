@@ -38,7 +38,7 @@
 					class="header__container header__container--whitebg container"
 				>
 					<div class="header__contant">
-						<div class="header__top header__top--about">
+						<div class="header__top">
 							<div class="header__top-buttons">
 								<button
 									type="button"
@@ -138,9 +138,7 @@
 									</defs>
 								</svg>
 							</a>
-							<a
-								href="about.html"
-								class="header__menu-link header__menu-link--about"
+							<a href="about.html" class="header__menu-link"
 								>о нас</a
 							>
 							<a href="services.html" class="header__menu-link"
@@ -152,7 +150,11 @@
 							<a href="publication.html" class="header__menu-link"
 								>публікації</a
 							>
-							<a href="contact.html" class="header__menu-link">контакти</a>
+							<a
+								href="contact.html"
+								class="header__menu-link header__menu-link--contact"
+								>контакти</a
+							>
 						</nav>
 						<div class="header__logo-bread">
 							<a
@@ -262,12 +264,13 @@
 							</a>
 							<div class="header__bread">
 								<a
-									href="about.html"
+									href="contact.html"
 									class="header__bread header__bread--whitebg bread"
-									>о нас</a
+									>контакти</a
 								>
 							</div>
 						</div>
+
 						<div class="header__burger-menu">
 							<button
 								aria-label="открить меню"
@@ -278,208 +281,145 @@
 					</div>
 				</div>
 			</header>
-			<div class="container">
-				<section class="back">
-					<div class="back__content">
-						<h1 class="back__title hero-mobil">
-							Перевертаємо уявлення про юридичні послуги.
-						</h1>
-						<div class="back__text paragraf-about">
-							Консолідуючи багаторічний досвід і практику, юристи
-							компанії супроводжують складні проекти і досягають
-							прийняття ряду важливих для галузі рішень. Багато з
-							них формують практику застосування морського права в
-							Україні.
+			<main class="contact">
+				<div class="contact__content container">
+					<section class="contact__links">
+						<a
+							aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 "
+							href="https://goo.gl/maps/CQF157WzSKJqaThv8"
+							class="contact__street"
+							>Одеса, Адміральський пр., 3</a
+						>
+						<div class="contact__telandmail">
+							<div class="contact__mobtel">
+								<a
+									aria-label="позвонить на телефон +380503901591"
+									href="tel:+380503901591"
+								>
+									+38 (050) 390 15 91
+								</a>
+							</div>
+							<div class="contact__mail">
+								<a
+									aria-label="написать на почту contact@hlegals.net"
+									href="mailto:contact@hlegals.net"
+									>contact@hlegals.net</a
+								>
+							</div>
 						</div>
-						<div class="back__text paragraf-about">
-							Prolegals – надійний бізнес-партнер, що
-							підтверджується стабільним співробітництвом з
-							міжнародними юридичними фірмами, довірою великих
-							українських і міжнародних компаній, визнанням
-							професійних рейтингів.
-						</div>
-					</div>
-					<div class="back__antal">
-						<div class="back__antal-item">
-							<div
-								class="back__antal-item__numb back__antal-item__numb--flag about-antal"
+						<a href="#" class="contact__facebok">
+							<svg
+								width="38"
+								height="38"
+								viewBox="0 0 38 38"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
 							>
-								10+
-							</div>
-							<div class="back__antal-item__text text-18-21">
-								років релевантного досвіду
-							</div>
-						</div>
-						<div class="back__antal-item">
+								<path
+									d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+									fill=""
+								/>
+							</svg>
+							Наша сторінка в фейсбуці
+						</a>
+					</section>
+					<section class="contact__modal">
+						<div class="modal modal--contact">
 							<div
-								class="back__antal-item__numb back__antal-item__numb--diplomat about-antal"
+								class="modal__container modal__container--contact"
 							>
-								30+
+								<form
+									action="https://fom.in.ua/echo"
+									method="post"
+									name="form"
+								>
+									<ul class="modal__list">
+										<li
+											class="modal__title modal__title--contact"
+										>
+											Ми хотіли б Вам допомогти
+											<div
+												class="modal__close modal__close--contact"
+											>
+												<button
+													aria-label="закрить модальное окно"
+													class="modal__close-btn activet"
+												></button>
+											</div>
+										</li>
+										<li>
+											<label>
+												<input
+													aria-label="сюда нужно написать емеил"
+													class="modal__input"
+													type="text"
+													name="name"
+													placeholder="Iм'я"
+												/>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input
+													aria-label="сюда нужно написать сообщение"
+													class="modal__message"
+													type="text"
+													name="messege"
+													placeholder="Повiдомлення"
+												/>
+											</label>
+										</li>
+										<li class="modal__how top-title">
+											Як вам відповісти?
+										</li>
+										<li>
+											<label>
+												<input
+													aria-label="сюда нужно написать номер телефона, обизательное поле для ввода"
+													class="modal__input modal__input-tel"
+													type="tel"
+													name="tel"
+													placeholder="Номер телефона"
+													required
+												/>
+											</label>
+										</li>
+										<li>
+											<label>
+												<input
+													aria-label="сюда нужно написать емеил, необизательно если веден телефон"
+													class="modal__input"
+													type="email"
+													name="mail"
+													placeholder="Чи email"
+												/>
+											</label>
+										</li>
+										<li>
+											<button
+												aria-label="отправить запрос"
+												type="submit"
+												class="modal__btn btn btn--blue"
+											>
+												Надіслати запит
+											</button>
+										</li>
+									</ul>
+								</form>
 							</div>
-							<div class="back__antal-item__text text-18-21">
-								активних клієнтів, які довіряють нам свої
-								доручення щомісячно
-							</div>
 						</div>
-						<div class="back__antal-item">
-							<div
-								class="back__antal-item__numb back__antal-item__numb--star about-antal"
-							>
-								500+
-							</div>
-							<div class="back__antal-item__text text-18-21">
-								годин роботи «pro bono» щорічно
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-			<div class="team">
-				<div class="team__text">Команда</div>
-			</div>
-			<div class="container">
-				<section class="quality">
-					<div class="quality__content">
-						<div class="quality__text paragraf-about">
-							Історично незмінна юридична професія почала
-							переформатовуватись в останні роки. Клієнти це
-							відчувають, але юридичні фірми все ще опираються
-							еволюції. Клієнти потребують зручності, простоти,
-							прозорої оплати. Google, IBM WatsОn, Symantec
-							Clearwell доводять, що технологічна революція в
-							юридичних послугах розпочалася і стала неминучою.
-						</div>
-						<div class="quality__text paragraf-about">
-							Якість — це те, про що ми піклуємося найбільше.
-						</div>
-						<div class="quality__text paragraf-about">
-							Все просто. Якщо ви не задоволені нашою роботою, ми
-							повернемо гроші. Ми довіряємо нашим клієнтам. І ми
-							хочемо, щоб клієнти нам теж довіряли.
-						</div>
-					</div>
-					<h2 class="quality__title hero-mobil">
-						Якість — це те, про що ми піклуємося найбільше.
-					</h2>
-				</section>
-			</div>
+					</section>
+				</div>
+				<iframe
+					class="contact__map"
+					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2749.638466419027!2d30.7401301!3d46.436045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c63396894457b7%3A0x7f6c5236cbcb70c8!2sAdmiral&#39;s&#39;kyi%20Ave%2C%203%2C%20Odesa%2C%20Odes&#39;ka%20oblast%2C%20Ukraine%2C%2065000!5e0!3m2!1sda!2sdk!4v1633865380099!5m2!1sda!2sdk"
+					style="border: 0;"
+					allowfullscreen=""
+					loading="lazy"
+				></iframe>
+			</main>
 			<div class="bottom-bg-grey">
 				<div class="container">
-					<div class="slider-about">
-						<h3 class="slider-about__title h3-caps">
-							Досягнення
-						</h3>
-						<div class="slider-about__content slide-js-achievement">
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="img/slider_about-legal.jpg"
-										alt="картинка исчезла"
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="img/slider_about-symbol.jpg"
-										alt="картинка убежала"
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="img/slider_about-2017.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-ulf.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-							<div class="slider-about__item">
-								<div class="slider-about__item-container">
-									<img
-										class="img-responsive"
-										src="../img/slider_about-legal.jpg"
-										alt=""
-									/>
-								</div>
-							</div>
-						</div>
-					</div>
 					<footer class="footer">
 						<div class="footer__container">
 							<div class="footer__addres">
