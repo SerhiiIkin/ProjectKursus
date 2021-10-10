@@ -1,6 +1,30 @@
 .top--services {
     margin-bottom: 18px;
     border-radius: 0 0 12px 12px;
-    background: url("../img/bg_servic.jpg") top center no-repeat, linear-gradient(217.57deg, #323264 70.93%, #323264 69.17%, #643e72 85.46%), linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%);
+    background:
+        url("../img/bg_servic.jpg") top center no-repeat,
+        linear-gradient(
+            217.57deg,
+            #323264 70.93%,
+            #323264 69.17%,
+            #643e72 85.46%
+        ),
+        linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%);
+    background-size: 1400px 500px;
     padding-bottom: 80px;
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .top--services {
+        background:
+            url("../img/bg_servic@2x.jpg") top center no-repeat,
+            linear-gradient(
+                217.57deg,
+                #323264 70.93%,
+                #323264 69.17%,
+                #643e72 85.46%
+            ),
+            linear-gradient(180deg, rgba(50, 50, 100, 0.1) 0%, #323264 100%);
+        background-size: 1400px 500px;
+    }
 }

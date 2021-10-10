@@ -1,5 +1,5 @@
 .consecutive {
-    &__comp {
+    &__comp-buttons {
         display: none;
     }
     // .consecutive__container
@@ -58,26 +58,33 @@
 
 @media (min-width: 992px) {
     .consecutive {
-        &__slider {
+        &__title {
             display: none;
         }
         &__container {
             padding: 102px 0 10px 10px;
         }
+        &__slide {
+            display: none;
+            align-self: center;
+            padding: 0 40px;
+            grid-column: 2/3;
+        }
         // .consecutive__comp
-        &__comp {
-            display: flex;
-            justify-content: space-between;
+        &__slider {
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-template-rows: auto;
             padding-bottom: 114px;
         }
-
         // .consecutive__comp-buttons
         &__comp-buttons {
             display: flex;
             flex-direction: column;
-            width: 43%;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            padding-left: 10px;
         }
-
         // .consecutive__button
         &__button {
             border: 0;
@@ -99,14 +106,6 @@
                 padding-bottom: 0;
             }
         }
-
-        // .consecutive__content
-        &__content {
-            width: 55%;
-            align-self: center;
-            padding: 0 10px;
-        }
-
         // .consecutive__subtitle
         &__subtitle {
             font-size: 32px;
@@ -118,10 +117,6 @@
             font-size: 21px;
             line-height: 30px;
             color: $white;
-        }
-        // .consecutive__poslid
-        &__block {
-            display: none;
         }
     }
 }

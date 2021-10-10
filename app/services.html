@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 	<head>
-		<title>Last Project</title>
+		<title>MY Project</title>
 		<link rel="stylesheet" href="css/style.css" />
 		<meta
 			name="viewport"
 			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
 		/>
 		<meta charset="UTF-8" />
-        <link
+		<link
 			rel="preload"
 			href="fonts/TTNorms-Bold.woff2"
 			as="font"
@@ -153,34 +153,23 @@
 										</defs>
 									</svg>
 								</a>
-								<a
-									aria-label="переход на страницу о нас"
-									href="about.html"
-									class="header__menu-link"
+								<a href="about.html" class="header__menu-link"
 									>о нас</a
 								>
 								<a
-									aria-label="переход на страницу послуги"
 									href="services.html"
 									class="header__menu-link header__menu-link--services"
 									>послуги</a
 								>
-								<a
-									aria-label="переход на страницу о команда"
-									href="#"
-									class="header__menu-link"
+								<a href="team.html" class="header__menu-link"
 									>команда</a
 								>
 								<a
-									aria-label="переход на страницу о публикации"
-									href="#"
+									href="publication.html"
 									class="header__menu-link"
 									>публікації</a
 								>
-								<a
-									aria-label="переход на страницу контакти"
-									href="#"
-									class="header__menu-link"
+								<a href="#" class="header__menu-link"
 									>контакти</a
 								>
 							</nav>
@@ -293,7 +282,6 @@
 								</a>
 								<div class="header__bread">
 									<a
-										aria-label="переход на страницу послуги"
 										href="services.html"
 										class="header__bread header__bread--services bread"
 										>послуги</a
@@ -313,16 +301,14 @@
 						</div>
 					</div>
 				</header>
-				<div class="services services--service">
+				<section class="services services--service">
 					<div class="container">
 						<div class="services__block services__block--service">
-							<a
-								aria-label="переход на страницу послуги"
-								href="services.html"
+							<h1
 								class="services__block__subtitle services__block__subtitle--it services__block__subtitle--service hero-mobil"
 							>
 								IT та електронна комерція
-							</a>
+                            </h1>
 							<div
 								class="services__block__text services__block__text--service paragraph"
 							>
@@ -404,11 +390,12 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 			<div class="service-info">
 				<div class="container">
-					<div class="info info--services">
+					<section class="info info--services">
+						<h2 class="visually-hidden">Информационый блок</h2>
 						<div class="info__container">
 							<a
 								aria-label="переход на страницу инфо"
@@ -419,7 +406,7 @@
 									Супровід проекту з купівлі-продажу
 									сільськогосподарської продукції
 								</div>
-								<div class="info__item__firma-name">
+								<div class="info__item__firma-name paragraph">
 									Hillel IT School
 								</div>
 							</a>
@@ -434,7 +421,7 @@
 									Підготовка комплексного юридичного висновку
 									для європейського банку
 								</div>
-								<div class="info__item__firma-name">
+								<div class="info__item__firma-name paragraph">
 									WannaBiz
 								</div>
 							</a>
@@ -449,7 +436,7 @@
 									Супровід проекту з купівлі-продажу
 									сільськогосподарської продукції
 								</div>
-								<div class="info__item__firma-name">
+								<div class="info__item__firma-name paragraph">
 									tapgerine
 								</div>
 							</a>
@@ -465,7 +452,7 @@
 									зернотрейдера в податковому спорі
 								</div>
 								<div
-									class="info__item__firma-name info__item__firma-name--up"
+									class="info__item__firma-name info__item__firma-name--up paragraph"
 								>
 									3d look
 								</div>
@@ -480,7 +467,7 @@
 								<div class="info__item__title h3-mobil">
 									Оскарження податкових повідомлень-рішень ДФС
 								</div>
-								<div class="info__item__firma-name">
+								<div class="info__item__firma-name paragraph">
 									adtelligent
 								</div>
 							</a>
@@ -495,10 +482,10 @@
 									Супровід проекту з кредитування
 									агротрейдерів мальтійським банком
 								</div>
-								<div class="info__item__firma-name">Clikky</div>
+								<div class="info__item__firma-name paragraph">Clikky</div>
 							</a>
 						</div>
-					</div>
+					</section>
 				</div>
 			</div>
 			<footer class="footer">
@@ -540,7 +527,7 @@
 						<a
 							aria-label="позвонить по телефону +380503901591"
 							href="tel:+380503901591"
-							class="tel"
+							class="footer__mobtel tel"
 						>
 							+38 (050) 390 15 91
 						</a>

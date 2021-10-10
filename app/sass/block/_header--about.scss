@@ -1,26 +1,4 @@
 .header {
-    &__container--about {
-        &::before,
-        &::after {
-            width: 0;
-        }
-
-        padding-bottom: 0;
-    }
-    &__logo--about {
-        margin: 0;
-        svg {
-            fill: $main;
-        }
-    }
-    &__bread--about {
-        color: $main;
-    }
-    &__menu--about {
-        a {
-            color: $accent_active;
-        }
-    }
     &__menu-link--about {
         &::after {
             content: "";
@@ -30,21 +8,6 @@
             width: 100%;
             height: 2px;
             background-color: $accent;
-        }
-    }
-    &__burger-menu-button--about {
-        color: $main;
-        &::after,
-        &::before {
-            background: $main;
-        }
-    }
-    &__top-facebook--about {
-        svg {
-            fill: $grey_text;
-            :hover {
-                fill: $accent;
-            }
         }
     }
 }

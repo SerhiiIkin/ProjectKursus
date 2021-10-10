@@ -4,11 +4,27 @@
     line-height: 21px;
     color: $main_soft;
 }
+.h3-mobil--main-alt {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: $main_alt;
+}
+.h3-mobil--main {
+    font-size: 18px;
+    line-height: 21px;
+    color: $main;
+}
 
 @media (min-width: 768px) {
-    .h3-mobil {
+    .h3-mobil,
+    .h3-mobil--main-alt {
         font-size: 24px;
         line-height: 28px;
         font-weight: normal;
+    }
+    .h3-mobil--main {
+        font-size: 24px;
+        line-height: 28px;
     }
 }

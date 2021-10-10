@@ -1,0 +1,46 @@
+.header {
+    &__container--whitebg {
+        &::before,
+        &::after {
+            width: 0;
+        }
+    }
+    &__top-facebook--whitebg {
+        svg {
+            fill: $grey_text;
+            :hover {
+                fill: $accent_active;
+            }
+        }
+    }
+    &__menu--whitebg {
+        a {
+            color: $accent_active;
+            &:hover {
+                color: $accent;
+            }
+            &:hover::after {
+                background-color: $accent;
+            }
+        }
+    }
+    &__logo--whitebg {
+        margin: 0;
+        svg {
+            fill: $main;
+        }
+    }
+    &__bread--whitebg {
+        color: $main;
+    }
+    &__burger-menu-button--whitebg {
+        color: $main;
+        &::before,
+        &::after {
+            background: $main;
+        }
+    }
+    &__tel--whitebg {
+        color: $grey_text;
+    }
+}

@@ -1,8 +1,8 @@
 @font-face {
     font-family: "TTNorms";
     src:
-        url('../fonts/TTNorms-Regular.woff') format('woff'),
-        url('../fonts/TTNorms-Regular.woff2') format('woff2');
+        url("../fonts/TTNorms-Regular.woff2") format("woff2"),
+        url("../fonts/TTNorms-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
@@ -10,8 +10,8 @@
 @font-face {
     font-family: "TTNorms";
     src:
-        url('../fonts/TTNorms-Medium.woff') format('woff'),
-        url('../fonts/TTNorms-Medium.woff2') format('woff2');
+        url("../fonts/TTNorms-Medium.woff2") format("woff2"),
+        url("../fonts/TTNorms-Medium.woff") format("woff");
     font-weight: 500;
     font-style: normal;
 }
@@ -19,8 +19,8 @@
 @font-face {
     font-family: "TTNorms";
     src:
-        url('../fonts/TTNorms-Bold.woff') format('woff'),
-        url('../fonts/TTNorms-Bold.woff2') format('woff2');
+        url("../fonts/TTNorms-Bold.woff2") format("woff2"),
+        url("../fonts/TTNorms-Bold.woff") format("woff");
     font-weight: 700;
     font-style: normal;
 }

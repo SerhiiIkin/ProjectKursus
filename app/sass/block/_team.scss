@@ -14,9 +14,15 @@
     }
 
     background:
-        url("../img/team-image.jpg") center 0/cover no-repeat,
+        url("../img/team-image.jpg") center 0 / cover no-repeat,
         linear-gradient(264.71deg, #f01432 0%, #323264 29.69%);
     height: 290px;
+}
+
+@media (min-resolution: 144dpi) and (min-resolution: 1.5dppx) {
+    .team {
+        background: url("../img/team-image@2x.jpg") center 0 / cover no-repeat;
+    }
 }
 
 @media (min-width: 992px) {

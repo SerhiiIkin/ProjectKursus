@@ -15,6 +15,7 @@
         line-height: 30px;
     }
     &__container {
+        border-radius: 12px;
         left: 50%;
         z-index: 201;
         top: 2%;
@@ -74,9 +75,15 @@
     }
     &__input {
         height: 47px;
+        &::placeholder {
+            padding-left: 10px;
+        }
     }
     &__message {
         height: 180px;
+        &::placeholder {
+            padding-left: 10px;
+        }
     }
     &__list {
         list-style: none;

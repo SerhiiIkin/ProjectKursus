@@ -1,0 +1,12 @@
+.h2-mobil {
+    font-size: 22px;
+    line-height: 26px;
+    color: $main;
+}
+
+@media (min-width: 992px) {
+    .h2-mobil {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}

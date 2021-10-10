@@ -1,4 +1,7 @@
 .footer {
+    &--border {
+        border-top: 4px solid $grey_separator;
+    }
     // .footer__container
     &__container {
         padding-bottom: 118px;
@@ -61,7 +64,9 @@
             color: $accent;
         }
     }
-
+    &__mobtel {
+        color: $main_alt;
+    }
     // .footer__mail
     &__mail {
         grid-row: 2/3;
@@ -144,7 +149,6 @@
             }
             a:nth-child(2) {
                 position: relative;
-                color: $main_alt;
                 margin-right: 20px;
                 &:hover {
                     color: $accent;
@@ -186,9 +190,6 @@
         }
         &__map {
             padding-left: 48px;
-        }
-        &__mobtel {
-            color: $main_alt;
         }
         &__tob {
             grid-column: 2/3;

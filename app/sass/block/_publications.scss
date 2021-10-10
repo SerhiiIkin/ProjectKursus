@@ -1,6 +1,11 @@
 .publications {
+    &--side {
+        margin-bottom: 118px;
+    }
+
+    background: $grey_bg;
+    border-radius: 12px 12px 0 0;
     padding: 20px 0 5px;
-    border-bottom: 4px solid $grey_separator;
     &__container-item {
         padding-bottom: 34px;
         &--comp {
@@ -73,12 +78,6 @@
             }
         }
         &__dato {
-            font-weight: bold;
-            font-size: 12px;
-            line-height: 14px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            color: $grey_text;
             padding-top: 10px;
         }
         &__title-name {
@@ -116,7 +115,6 @@
             }
             &--comp {
                 display: block;
-                padding-top: 10px;
             }
 
             height: 100%;

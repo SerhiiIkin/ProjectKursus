@@ -1,0 +1,125 @@
+.publication-side {
+    // .publication-side__img
+    &__img {
+        max-width: 910px;
+        margin: 0 auto;
+        img {
+            width: 100%;
+        }
+
+        padding-bottom: 20px;
+    }
+
+    // .publication-side__header
+    &__header {
+        border-bottom: 4px solid $grey_bg_alt;
+        padding-bottom: 20px;
+    }
+
+    // .publication-side__title
+    &__title {
+        padding-bottom: 10px;
+    }
+
+    // .publication-side__content
+    &__content {
+        padding-top: 20px;
+    }
+
+    // .publication-side__text
+    &__text {
+        padding-bottom: 20px;
+        p {
+            padding-top: 30px;
+        }
+    }
+
+    // .publication-side__hovedtitle
+    &__hovedtitle {
+        padding-bottom: 40px;
+    }
+
+    // .publication-side__text-list
+    &__text-list {
+        padding-bottom: 20px;
+        h3 {
+            padding-bottom: 20px;
+        }
+    }
+
+    // .publication-side__list
+    &__list {
+        list-style: none;
+        padding: 0;
+        ol {
+            padding-left: 40px;
+            padding-bottom: 20px;
+            position: relative;
+            &::before {
+                content: "1.";
+                position: absolute;
+                width: 30px;
+                height: 26px;
+                top: 0;
+                left: 20px;
+                color: $accent;
+            }
+            &:nth-child(2)::before {
+                content: "2.";
+            }
+        }
+    }
+
+    // .publication-side__advertising
+    &__advertising {
+        margin: 0 auto;
+        max-width: 640px;
+        img {
+            width: 100%;
+        }
+        &__title {
+            text-align: center;
+        }
+
+        padding-bottom: 20px;
+    }
+
+    // .publication-side__subtitle
+    &__subtitle {
+        padding-bottom: 20px;
+    }
+
+    // .publication-side__links
+    &__links {
+        padding: 20px 0;
+        border-top: 4px solid $grey_separator;
+        display: flex;
+        justify-content: center;
+    }
+
+    // .publication-side__link
+    &__link {
+        padding: 9px;
+        border-radius: 12px;
+        background: $grey_bg;
+        margin: 0 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .publication-side {
+        padding-top: 60px;
+        &__header {
+            margin-bottom: 40px;
+        }
+        &__text {
+            &--last {
+                margin-bottom: 40px;
+            }
+        }
+        &__links {
+            padding-bottom: 0;
+            justify-content: start;
+        }
+    }
+}
