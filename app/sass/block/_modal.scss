@@ -90,9 +90,6 @@
     }
     &__input {
         height: 47px;
-        &::placeholder {
-            padding-left: 10px;
-        }
     }
     &__message {
         padding: 20px 0 180px 10px;
@@ -114,6 +111,7 @@
             &:last-child {
                 text-align: center;
                 padding-bottom: 0;
+                margin: 0 0 20px 0;
             }
         }
     }
@@ -122,6 +120,7 @@
         border: none;
         border-radius: 8px;
         width: 100%;
+        padding-left: 20px;
         background-color: $white;
         &:focus {
             outline: 2px solid $accent;
@@ -149,6 +148,9 @@
         margin-bottom: 40px;
         z-index: 0;
     }
+    &__btn-place {
+        position: relative;
+    }
 }
 
 @media (min-width: 768px) {
@@ -173,6 +175,9 @@
             }
         }
     }
+}
+.error {
+    color: #e00000;
 }
 
 @media (min-width: 992px) {

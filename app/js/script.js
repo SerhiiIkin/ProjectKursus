@@ -25,7 +25,190 @@ $(document).ready(function () {
     if ($('.services__button').length) {
         modal();
     };
+    if ($(".modal__btn").length) {
+        send();
+    };
 });
+
+var send = function () {
+    var sendBtn = document.querySelector(".modal__btn");
+    var form = document.getElementById("form");
+    sendBtn.addEventListener("click", function () {
+        sendBtn.classList.toggle("btn--finish");
+        var spinner = document.querySelector(".modal__btn-place");
+        spinner.classList.toggle("spinner");
+        sendBtn.innerHTML = "Готово!";
+        if ("checkName" == true ) {
+            setTimeout('form.submit()',6500);
+        };
+        })
+    };
+validateForm = function () {
+    return checkName();
+
+};
+function checkName() {
+        var mail = document.getElementById("mail");
+        var x = document.form;
+        var input = x.mail.value;
+        var errMsgHolder = document.getElementById('nameErrMsg');
+        if (input.length < 5) {
+            errMsgHolder.innerHTML =
+                'Please enter a email with at least 5 letters';
+            return false;
+        } else if (!(/^\S{3,}$/.test(input))) {
+            errMsgHolder.innerHTML =
+                'Email cannot contain whitespace';
+            return false;
+        }else if(!(/^[a-zA-Z]+$/.test(input)))
+        {
+            errMsgHolder.innerHTML=
+                    'Only alphabets allowed'
+        }
+        else if(!(/^(?:(\w)(?!\1\1))+$/.test(input)))
+        {
+            errMsgHolder.innerHTML=
+                    'per 3 alphabets allowed'
+        }
+        else {
+            errMsgHolder.innerHTML = '';
+            return undefined;
+        }
+    }
+
+// var sendCheck = function () {
+//     const form = document.getElementById("form");
+//     var email = document.getElementById("mail");
+//     var mobTel = document.querySelector("tel");
+//     var mobTelError = document.querySelector("tel + span.error");
+//     var emailError = document.querySelector('mail + span.error');
+//
+//var First=document.getElementById("tel").value;
+//     var v = document.createElement("span");
+//     v.appendChild(document.createTextNode(First));
+//     document.getElementById("fd").appendChild(v);
+
+//     mobTel.addEventListener("input", function (event) {
+//         if (mobTel.validity.valid) {
+//             mobTelError.textContent = '';
+//             mobTelError.className = 'error';
+//         } else {
+//             showError();
+//         }
+//     });
+
+//     email.addEventListener('input', function (event) {
+//         if (email.validity.valid) {
+//             emailError.textContent = '';
+//             emailError.className = 'error';
+//         } else {
+//             showError();
+//         }
+//     });
+
+//     form.addEventListener('submit', function (event) {
+//         if (!email.validity.valid) {
+//             // Если поле email не валидно, отображаем соответствующее сообщение об ошибке
+//             showError();
+//             // Затем предотвращаем стандартное событие отправки формы
+//             event.preventDefault();
+//         }
+//         if (!mobTel.validity.valid) {
+//             showError();
+//             event.preventDefault();
+//         }
+//     });
+
+//     function showError() {
+//         if (mobTel.validity.valueMissing) {
+//             mobTelError.textContent = "You need to enter mobile telefon.";
+//         }
+//         else
+//             if (mobTel.validity.typeMismatch) {
+//                 mobTelError.textContent = 'Entered value needs to be an mobile telefon.';
+//             }
+//             else
+//                 if (mobTel.validity.tooShort) {
+//                     mobTelError.textContent = `Mobil telefon should be at least ${ mobTel.minLength } characters; you entered ${ mobTel.value.length }.`;
+//                 }
+//                 mobTelError.className = 'error active';
+//         if(email.validity.valueMissing) {
+//         // Если поле пустое,
+//         // отображаем следующее сообщение об ошибке
+//         emailError.textContent = 'You need to enter an e-mail address.';
+//         } else if(email.validity.typeMismatch) {
+//         // Если поле содержит не email-адрес,
+//         // отображаем следующее сообщение об ошибке
+//         emailError.textContent = 'Entered value needs to be an e-mail address.';
+//         }
+//         else if(email.validity.tooShort) {
+//         // Если содержимое слишком короткое,
+//         // отображаем следующее сообщение об ошибке
+//         emailError.textContent = `Email should be at least ${ email.minLength } characters; you entered ${ email.value.length }.`;
+//         }
+//         // Задаём соответствующую стилизацию
+//         emailError.className = 'error active';
+//     };
+
+//     var error = email;
+//     while ((error = error.nextSibling).nodeType != 1);
+
+// // Согласно спецификации HTML5
+// const emailRegExp = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+// // Многие устаревшие браузеры не поддерживают метод `addEventListener`
+// // Есть простой способ заменить его; и далеко не единственный
+// function addEvent(element, event, callback) {
+//     var previousEventCallBack = element["on"+event];
+//     element["on"+event] = function (e) {
+//     var output = callback(e);
+
+//     // Колбэк, который возвращает `false`, останавливает цепочку колбэков
+//     // и прерывает выполнение колбэка события
+//     if (output === false) return false;
+
+//         if (typeof previousEventCallBack === 'function') {
+//         output = previousEventCallBack(e);
+//         if(output === false) return false;
+//         }
+//     }
+//     };
+
+//     addEvent(window , "load" , function () {
+//   // Проверка, является ли поле пустым (помните, оно не являтеся обязательным)
+//   // Если поле не пустое, проверяем содержимое на соответствует шаблону email
+//     var test = email.value.length === 0 || emailRegExp.test(email.value);
+
+//     email.className = test ? "valid" : "invalid";
+//     });
+
+//     addEvent(email, "input", function () {
+//     var test = email.value.length === 0 || emailRegExp.test(email.value);
+//     if (test) {
+//     email.className = "valid";
+//     error.textContent = "";
+//     error.className = "error";
+//     } else {
+//     email.className = "invalid";
+//     }
+//     });
+//     addEvent(form, "submit", function () {
+//     var test = email.value.length === 0 || emailRegExp.test(email.value) || mobTel.value.length === 0;
+
+//     if (!test) {
+//     email.className = "invalid";
+//     error.textContent = "I expect an e-mail, darling!";
+//     error.className = "error active";
+//     // Некоторые устаревшие браузеры не поддерживают метод event.preventDefault()
+//     return false;
+//     } else {
+//     email.className = "valid";
+//     error.textContent = "";
+//     error.className = "error";
+//     }
+//     });
+// };
+
 
 
 var aboutSlide = function () {

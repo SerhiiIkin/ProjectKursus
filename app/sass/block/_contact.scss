@@ -64,6 +64,10 @@
         width: 100%;
         min-height: 600px;
     }
+    &__btn-place {
+        position: relative;
+        height: 80px;
+    }
 }
 
 @media (min-width: 992px) {

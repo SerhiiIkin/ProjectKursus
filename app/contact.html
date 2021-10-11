@@ -332,6 +332,9 @@
 									action="https://fom.in.ua/echo"
 									method="post"
 									name="form"
+									class="modal__form"
+									id="form"
+									onsubmit="return validateForm();"
 								>
 									<ul class="modal__list">
 										<li
@@ -355,6 +358,7 @@
 													type="text"
 													name="name"
 													placeholder="Iм'я"
+													required
 												/>
 											</label>
 										</li>
@@ -366,6 +370,7 @@
 													type="text"
 													name="messege"
 													placeholder="Повiдомлення"
+													required
 												/>
 											</label>
 										</li>
@@ -380,6 +385,8 @@
 													type="tel"
 													name="tel"
 													placeholder="Номер телефона"
+													minlength="8"
+													id="tel"
 													required
 												/>
 											</label>
@@ -391,20 +398,25 @@
 													class="modal__input"
 													type="email"
 													name="mail"
+													id="mail"
 													placeholder="Чи email"
+													minlength="8"
+													required
 												/>
 											</label>
 										</li>
-										<li>
+										<li class="modal__btn-place">
 											<button
 												aria-label="отправить запрос"
-												type="submit"
+												type="button"
 												class="modal__btn btn btn--blue"
+												onclick="validateForm();"
 											>
 												Надіслати запит
 											</button>
 										</li>
 									</ul>
+									<span id="nameErrMsg" class="error"></span>
 								</form>
 							</div>
 						</div>
