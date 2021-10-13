@@ -334,7 +334,6 @@
 									name="form"
 									class="modal__form"
 									id="form"
-									onsubmit="return validateForm();"
 								>
 									<ul class="modal__list">
 										<li
@@ -385,9 +384,7 @@
 													type="tel"
 													name="tel"
 													placeholder="Номер телефона"
-													minlength="8"
 													id="tel"
-													required
 												/>
 											</label>
 										</li>
@@ -398,25 +395,21 @@
 													class="modal__input"
 													type="email"
 													name="mail"
-													id="mail"
+													id="email"
 													placeholder="Чи email"
-													minlength="8"
-													required
 												/>
 											</label>
 										</li>
 										<li class="modal__btn-place">
 											<button
 												aria-label="отправить запрос"
-												type="button"
+												type="submit"
 												class="modal__btn btn btn--blue"
-												onclick="validateForm();"
 											>
 												Надіслати запит
 											</button>
 										</li>
 									</ul>
-									<span id="nameErrMsg" class="error"></span>
 								</form>
 							</div>
 						</div>

@@ -2321,10 +2321,6 @@ input[type="radio"].visually-hidden {
   }
 }
 
-.error {
-  color: #e00000;
-}
-
 @media (min-width: 992px) {
   .modal--contact {
     top: 0;
