@@ -3026,13 +3026,13 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 
-.publication-side__list ol {
+.publication-side__list li {
   padding-left: 40px;
   padding-bottom: 20px;
   position: relative;
 }
 
-.publication-side__list ol::before {
+.publication-side__list li::before {
   content: "1.";
   position: absolute;
   width: 30px;
@@ -3042,7 +3042,7 @@ input[type="radio"].visually-hidden {
   color: #f0145a;
 }
 
-.publication-side__list ol:nth-child(2)::before {
+.publication-side__list li:nth-child(2)::before {
   content: "2.";
 }
 
