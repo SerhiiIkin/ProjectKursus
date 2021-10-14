@@ -8,7 +8,7 @@
     height: 100%;
     overflow-y: auto;
     &__title {
-        max-width: 300px;
+        max-width: 282px;
         color: $accent;
         font-weight: bold;
         font-size: 22px;
@@ -95,9 +95,7 @@
         padding: 20px 0 180px 10px;
     }
     &__list {
-        list-style: none;
-        padding: 0;
-        li {
+        div {
             margin: 0 auto;
             padding-bottom: 20px;
             &:first-child {

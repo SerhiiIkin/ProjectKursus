@@ -42,19 +42,27 @@
 							<div class="header__top-buttons">
 								<button
 									type="button"
-									class="header__button header__button--red"
+									class="header__button header__button--red header__button--whitebg"
 								>
 									ук
 								</button>
-								<button type="button" class="header__button">
+								<button
+									type="button"
+									class="header__button header__button--whitebg"
+								>
 									ру
 								</button>
-								<button type="button" class="header__button">
+								<button
+									type="button"
+									class="header__button header__button--whitebg"
+								>
 									en
 								</button>
 							</div>
 							<div class="header__top-links">
-								<a class="header__top-adress adress" href="#"
+								<a
+									class="header__top-adress header__top-adress--whitebg adress"
+									href="#"
 									>Одеса, Адміральський пр., 3</a
 								>
 								<a
@@ -152,7 +160,7 @@
 							>
 							<a
 								href="contact.html"
-								class="header__menu-link header__menu-link--contact"
+								class="header__menu-link header__menu-link--current"
 								>контакти</a
 							>
 						</nav>
@@ -335,8 +343,8 @@
 									class="modal__form"
 									id="form"
 								>
-									<ul class="modal__list">
-										<li
+									<div class="modal__list">
+										<div
 											class="modal__title modal__title--contact"
 										>
 											Ми хотіли б Вам допомогти
@@ -348,8 +356,8 @@
 													class="modal__close-btn activet"
 												></button>
 											</div>
-										</li>
-										<li>
+										</div>
+										<div>
 											<label>
 												<input
 													aria-label="сюда нужно написать емеил"
@@ -360,8 +368,8 @@
 													required
 												/>
 											</label>
-										</li>
-										<li>
+										</div>
+										<div>
 											<label>
 												<input
 													aria-label="сюда нужно написать сообщение"
@@ -372,11 +380,11 @@
 													required
 												/>
 											</label>
-										</li>
-										<li class="modal__how top-title">
+										</div>
+										<div class="modal__how top-title">
 											Як вам відповісти?
-										</li>
-										<li>
+										</div>
+										<div>
 											<label>
 												<input
 													aria-label="сюда нужно написать номер телефона, обизательное поле для ввода"
@@ -387,8 +395,8 @@
 													id="tel"
 												/>
 											</label>
-										</li>
-										<li>
+										</div>
+										<div>
 											<label>
 												<input
 													aria-label="сюда нужно написать емеил, необизательно если веден телефон"
@@ -399,8 +407,8 @@
 													placeholder="Чи email"
 												/>
 											</label>
-										</li>
-										<li class="modal__btn-place">
+										</div>
+										<div class="modal__btn-place">
 											<button
 												aria-label="отправить запрос"
 												type="submit"
@@ -408,8 +416,8 @@
 											>
 												Надіслати запит
 											</button>
-										</li>
-									</ul>
+										</div>
+									</div>
 								</form>
 							</div>
 						</div>

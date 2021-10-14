@@ -117,7 +117,7 @@ var modal = function() {
         modalWin.classList.remove("close");
         modalWin.classList.toggle("open");
         document.body.classList.toggle("lock");
-    })
+    });
     var closeMod = document.querySelector(".modal__close");
     closeMod.addEventListener("click", function closeModalW() {
         modalWin.classList.toggle("close");

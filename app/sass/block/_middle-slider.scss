@@ -2,7 +2,7 @@
     &__slide-item {
         background: $grey_bg;
         display: grid;
-        grid-template-columns: auto 1fr 1fr;
+        grid-template-columns: auto 1fr;
         grid-template-rows: auto auto auto;
         padding: 20px 20px 10px 20px;
         border-radius: 12px;
@@ -66,37 +66,35 @@
 
 @media (min-width: 992px) {
     .middle-slider {
-        height: auto;
-        &__slide {
-            grid-template-columns: 32% auto;
-        }
         &__slide-item {
             padding: 0;
+            height: 100%;
+            grid-template-rows: min-content min-content 1fr;
         }
         &-top {
-            grid-column: 2/4;
+            grid-column: 2/3;
             grid-row: 1/2;
             padding-left: 39px;
             padding-top: 41px;
         }
         &__text {
-            grid-column: 2/4;
+            grid-column: 2/3;
             grid-row: 2/3;
             padding-left: 41px;
-            padding-bottom: 22px;
         }
         &__who {
-            grid-column: 2/4;
+            grid-column: 2/3;
             grid-row: 3/4;
             padding-left: 40px;
-            padding-bottom: 173px;
             padding-top: 0;
+            padding-bottom: 10px;
         }
         &__content {
             grid-column: 1/2;
             grid-row: 1/-1;
             padding-top: 0;
-            width: 410px;
+            width: 413px;
+            align-self: center;
         }
         &__name {
             padding-top: 0;

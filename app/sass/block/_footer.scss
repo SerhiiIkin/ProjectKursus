@@ -1,7 +1,6 @@
 .footer {
-    &--border {
-        border-top: 4px solid $grey_separator;
-    }
+    border-top: 4px solid $grey_separator;
+    background: $grey_bg;
     // .footer__container
     &__container {
         padding-bottom: 118px;
