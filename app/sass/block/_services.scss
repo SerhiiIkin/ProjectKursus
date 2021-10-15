@@ -3,7 +3,6 @@
     &__container {
         display: flex;
         flex-direction: column;
-        padding: 0 40px;
     }
     // .services__top-title
     &__top-title {
@@ -49,7 +48,7 @@
 
     // .services__block
     &__block {
-        padding-bottom: 40px;
+        padding-bottom: 50px;
         &:last-child {
             padding-bottom: 7px;
         }
@@ -62,7 +61,7 @@
             display: flex;
             align-items: center;
             padding-left: 74px;
-            padding-bottom: 27px;
+            padding-bottom: 32px;
             &::before {
                 content: "";
                 position: absolute;
@@ -158,6 +157,7 @@
         }
         &__items {
             padding-bottom: 5px;
+            padding-left: 0;
         }
     }
 }

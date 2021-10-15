@@ -4,11 +4,11 @@
     &__container {
         display: flex;
         flex-direction: column;
-        padding: 18px 12px 20px 18px;
+        padding: 18px 12px 28px 18px;
     }
     &__logo-bread {
         display: flex;
-        padding-top: 17px;
+        padding-top: 21px;
     }
     &__menu-link {
         &::after {
@@ -207,11 +207,17 @@
 
 @media (min-width: 768px) {
     .header {
+        &__container {
+            padding-bottom: 20px;
+        }
         &__logo {
             svg {
                 width: 156px;
                 height: 63px;
             }
+        }
+        &__logo-bread {
+            padding-top: 17px;
         }
         &__bg {
             &::before {
@@ -243,7 +249,7 @@
             padding-right: 15px;
             a {
                 padding: 0;
-                margin: 15px 15px 0 0;
+                margin-right: 11px;
                 width: initial;
                 font-weight: 500;
                 font-size: 18px;
@@ -270,8 +276,9 @@
             }
         }
         &__top {
-            padding-right: 15px;
-            justify-content: flex-start;
+            padding-right: 9px;
+            padding-top: 12px;
+            justify-content: flex-end;
             align-items: center;
             height: 24px;
         }
@@ -289,14 +296,14 @@
                 background: $grey_separator;
             }
             &::before {
-                left: -11px;
+                left: -20px;
             }
             &::after {
-                right: -11px;
+                right: -15px;
             }
         }
         &__top-adress {
-            padding-left: 21px;
+            padding-left: 10px;
             display: inline-flex;
             font-size: 16px;
             line-height: 19px;
@@ -304,7 +311,7 @@
         }
         &__top-facebook {
             display: inline-block;
-            padding-left: 20px;
+            padding-left: 26px;
             svg {
                 fill: $grey_text;
                 :hover {

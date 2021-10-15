@@ -1,4 +1,10 @@
 .middle {
     background-color: #fff;
-    padding-top: 67px;
+    padding-top: 13px;
+}
+
+@media (min-width: 768px) {
+    .middle {
+        padding-top: 67px;
+    }
 }

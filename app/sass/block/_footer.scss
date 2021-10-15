@@ -4,7 +4,7 @@
     // .footer__container
     &__container {
         padding-bottom: 118px;
-        padding-top: 15px;
+        padding-top: 18px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -44,7 +44,7 @@
         grid-column: 1/2;
         align-self: center;
         align-content: center;
-        padding-bottom: 20px;
+        padding-bottom: 16px;
         svg {
             &:hover {
                 fill: $accent;

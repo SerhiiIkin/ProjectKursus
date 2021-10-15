@@ -1,4 +1,17 @@
 .info--services {
-    padding-bottom: 52px;
+    padding-bottom: 36px;
+    padding-top: 3px;
 }
 
+@media (min-width: 768px) {
+    .info--services {
+        padding-top: 27px;
+        padding-bottom: 41px;
+    }
+}
+
+@media (min-width: 992px) {
+    .info--services {
+        padding-top: 56px;
+    }
+}

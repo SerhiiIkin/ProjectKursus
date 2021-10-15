@@ -90,13 +90,16 @@
     }
     &__button {
         padding: 16px 76px;
-        margin-bottom: 27px;
+        margin-bottom: 35px;
     }
 }
 
 @media (min-width: 768px) {
     .publications {
         padding: 40px 20px 45px;
+        &__button {
+            margin-bottom: 27px;
+        }
         &__container-items {
             flex-direction: row;
             flex-wrap: wrap;

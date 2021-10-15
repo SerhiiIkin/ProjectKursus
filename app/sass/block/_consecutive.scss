@@ -62,7 +62,7 @@
             display: none;
         }
         &__container {
-            padding: 102px 0 10px 10px;
+            padding: 106px 0 0 10px;
         }
         &__slide {
             display: none;
@@ -75,7 +75,7 @@
             display: grid;
             grid-template-columns: auto auto;
             grid-template-rows: auto;
-            padding-bottom: 114px;
+            padding-bottom: 100px;
         }
         // .consecutive__comp-buttons
         &__comp-buttons {
@@ -85,13 +85,16 @@
             grid-row: 1/2;
             padding-left: 10px;
         }
+        &__block {
+            padding-top: 50px;
+        }
         // .consecutive__button
         &__button {
             border: 0;
             border-right: 4px solid $grey_separator;
             display: flex;
             justify-content: end;
-            padding: 0 46px 22px 10px;
+            padding: 0 41px 22px 10px;
             font-size: 42px;
             line-height: 50px;
             outline: none;
@@ -110,6 +113,7 @@
         &__subtitle {
             font-size: 32px;
             line-height: 38px;
+            padding-bottom: 22px;
         }
 
         // .consecutive__text
