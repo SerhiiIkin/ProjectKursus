@@ -4,8 +4,8 @@
     left: 0;
     top: -140%;
     z-index: 200;
-    width: 100%;
     height: 100%;
+    width: 100%;
     overflow-y: auto;
     &__title {
         max-width: 282px;
@@ -19,12 +19,12 @@
     }
     &__container {
         border-radius: 12px;
-        left: 50%;
         z-index: 201;
-        top: 2%;
-        transform: translateX(-50%);
         min-width: 335px;
         padding: 20px;
+        top: 0;
+        left: 50%;
+        transform: translate(-13%, -50vh);
         background: $grey_bg;
         position: absolute;
         &--contact {
@@ -161,6 +161,7 @@
         &__container {
             padding: 20px;
             min-width: 525px;
+            transform: translate(-27%, -56vh);
         }
         &__list {
             li {

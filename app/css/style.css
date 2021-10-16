@@ -2001,6 +2001,7 @@ input[type="radio"].visually-hidden {
 .services__button-container {
   text-align: center;
   padding-bottom: 50px;
+  position: relative;
 }
 
 .services__button {
@@ -2104,8 +2105,8 @@ input[type="radio"].visually-hidden {
   left: 0;
   top: -140%;
   z-index: 200;
-  width: 100%;
   height: 100%;
+  width: 100%;
   overflow-y: auto;
 }
 
@@ -2123,13 +2124,13 @@ input[type="radio"].visually-hidden {
 
 .modal__container {
   border-radius: 12px;
-  left: 50%;
   z-index: 201;
-  top: 2%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   min-width: 335px;
   padding: 20px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-13%, -50vh);
+          transform: translate(-13%, -50vh);
   background: #f5f5fa;
   position: absolute;
 }
@@ -2313,6 +2314,8 @@ input[type="radio"].visually-hidden {
   .modal__container {
     padding: 20px;
     min-width: 525px;
+    -webkit-transform: translate(-27%, -56vh);
+            transform: translate(-27%, -56vh);
   }
   .modal__list li {
     padding-bottom: 20px;
