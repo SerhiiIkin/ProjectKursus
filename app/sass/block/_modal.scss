@@ -2,11 +2,12 @@
     background: rgba(50, 50, 100, 0.7);
     position: absolute;
     left: 0;
-    top: -140%;
+    top: -100%;
     z-index: 200;
     height: 100%;
     width: 100%;
     overflow-y: auto;
+    transition: all 0.3s ease 0s;
     &__title {
         max-width: 282px;
         color: $accent;
@@ -22,9 +23,9 @@
         z-index: 201;
         min-width: 335px;
         padding: 20px;
-        top: 0;
+        top: 5%;
         left: 50%;
-        transform: translate(-13%, -50vh);
+        transform: translateX(-50%);
         background: $grey_bg;
         position: absolute;
         &--contact {
@@ -145,6 +146,7 @@
         background: none;
         margin-bottom: 40px;
         z-index: 0;
+        left: 0;
     }
     &__btn-place {
         position: relative;
@@ -161,7 +163,6 @@
         &__container {
             padding: 20px;
             min-width: 525px;
-            transform: translate(-27%, -56vh);
         }
         &__list {
             li {

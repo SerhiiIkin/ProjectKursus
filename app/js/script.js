@@ -106,29 +106,13 @@ var menu = function() {
     document.body.classList.toggle("lock");
 });
 }
-function getCoords() {
-    var openMod = document.querySelector(".services__button");
-    var coords = openMod.getBoundingClientRect();
-        return {
-            top: coords.top + pageYOffset,
-            left: coords.left + pageXOffset
-        };
-}
-function createMessageUnder() {
-    var coords = getCoords();
-    var modalWinCon = document.querySelector(".modal__container");
-    modalWinCon.style.left = coords.left + "px";
-    modalWinCon.style.top = coords.top + "px";
-}
-
-var modal = function() {
+function modal() {
     var openMod = document.querySelector(".services__button");
     openMod.addEventListener("click", function openModW() {
         var modalWin = document.querySelector(".modal");
         modalWin.classList.remove("close");
         modalWin.classList.toggle("open");
         document.body.classList.toggle("lock");
-        return createMessageUnder();
     });
     var closeMod = document.querySelector(".modal__close");
     closeMod.addEventListener("click", function closeModalW() {
@@ -136,7 +120,7 @@ var modal = function() {
         modalWin.classList.toggle("close");
         modalWin.classList.remove("open");
         document.body.classList.remove("lock");
-    })
+    });
 }
 var conSlide = function () {
 var allBtn = document.querySelectorAll(".consecutive__button");

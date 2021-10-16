@@ -2103,11 +2103,13 @@ input[type="radio"].visually-hidden {
   background: rgba(50, 50, 100, 0.7);
   position: absolute;
   left: 0;
-  top: -140%;
+  top: -100%;
   z-index: 200;
   height: 100%;
   width: 100%;
   overflow-y: auto;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .modal__title {
@@ -2127,10 +2129,10 @@ input[type="radio"].visually-hidden {
   z-index: 201;
   min-width: 335px;
   padding: 20px;
-  top: 0;
+  top: 5%;
   left: 50%;
-  -webkit-transform: translate(-13%, -50vh);
-          transform: translate(-13%, -50vh);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   background: #f5f5fa;
   position: absolute;
 }
@@ -2299,6 +2301,7 @@ input[type="radio"].visually-hidden {
   background: none;
   margin-bottom: 40px;
   z-index: 0;
+  left: 0;
 }
 
 .modal__btn-place {
@@ -2314,8 +2317,6 @@ input[type="radio"].visually-hidden {
   .modal__container {
     padding: 20px;
     min-width: 525px;
-    -webkit-transform: translate(-27%, -56vh);
-            transform: translate(-27%, -56vh);
   }
   .modal__list li {
     padding-bottom: 20px;
@@ -2334,15 +2335,15 @@ input[type="radio"].visually-hidden {
 }
 
 .close {
-  top: -110%;
+  top: -100%;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
 .open {
   top: 0;
-  -webkit-transition: all 0.9s ease 0s;
-  transition: all 0.9s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 
 .bread {
