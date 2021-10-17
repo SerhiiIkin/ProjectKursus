@@ -12,10 +12,6 @@
         width: 85%;
         transform: translate(-50%, -50%) rotate(45deg);
     }
-    &:active::after,
-    &:active::before {
-        background: #ec6f5d;
-    }
     &::before {
         transform: translate(-50%, -50%) rotate(-45deg);
     }
@@ -23,5 +19,9 @@
         background: $grey_bg_alt;
         border-radius: 12px;
         max-width: 120%;
+    }
+    &:active::after,
+    &:active::before {
+        background: #ec6f5d;
     }
 }

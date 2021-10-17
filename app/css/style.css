@@ -2490,10 +2490,6 @@ input[type="radio"].visually-hidden {
           transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.activet:active::after, .activet:active::before {
-  background: #ec6f5d;
-}
-
 .activet::before {
   -webkit-transform: translate(-50%, -50%) rotate(-45deg);
           transform: translate(-50%, -50%) rotate(-45deg);
@@ -2503,6 +2499,10 @@ input[type="radio"].visually-hidden {
   background: #ededf7;
   border-radius: 12px;
   max-width: 120%;
+}
+
+.activet:active::after, .activet:active::before {
+  background: #ec6f5d;
 }
 
 .about-antal {
