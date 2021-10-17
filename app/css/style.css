@@ -284,7 +284,6 @@ input[type="radio"].visually-hidden {
   text-align: center;
   background-color: #fff;
   grid-area: menu;
-  overflow-y: auto;
 }
 
 .header__menu a {
@@ -467,6 +466,15 @@ input[type="radio"].visually-hidden {
     -ms-flex-item-align: center;
         align-self: center;
     padding-left: 0;
+  }
+}
+
+@media (max-height: 350px) {
+  .header__menu {
+    overflow-y: auto;
+  }
+  .header__menu-link--current::after {
+    background-color: none;
   }
 }
 
