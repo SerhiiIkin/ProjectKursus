@@ -2103,6 +2103,7 @@ input[type="radio"].visually-hidden {
   height: 100%;
   width: 100%;
   top: 0;
+  overflow-y: auto;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
