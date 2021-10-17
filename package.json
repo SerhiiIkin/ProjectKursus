@@ -3,9 +3,12 @@
     "version": "1.0.0",
     "description": "",
     "devDependencies": {
+        "@babel/plugin-transform-runtime": "^7.15.8",
+        "@babel/preset-env": "^7.15.8",
         "browser-sync": "^2.26.10",
         "del": "^5.1.0",
         "gulp": "^4.0.2",
+        "gulp-babel": "^8.0.0",
         "gulp-clean-css": "^4.3.0",
         "gulp-group-css-media-queries": "^1.2.2",
         "gulp-htmlmin": "^5.0.1",
@@ -13,10 +16,12 @@
         "gulp-replace": "^1.0.0",
         "gulp-sass": "^4.1.0",
         "node-sass": "^4.14.1",
+        "prettier": "2.4.1",
         "stylelint": "^13.13.1",
         "stylelint-config-standard": "^22.0.0"
     },
     "dependencies": {
+        "@babel/runtime": "^7.15.4",
         "autoprefixer": "^10.3.7",
         "gulp-concat": "^2.6.1",
         "gulp-imagemin": "^7.1.0",

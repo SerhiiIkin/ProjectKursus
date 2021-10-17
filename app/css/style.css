@@ -34,6 +34,8 @@ body {
   scroll-behavior: smooth;
   font-weight: normal;
   font-style: normal;
+  height: 100%;
+  width: 100%;
   font-family: "TTNorms", Arial, sans-serif;
 }
 
@@ -1942,11 +1944,6 @@ input[type="radio"].visually-hidden {
   padding: 17px 36px;
 }
 
-.publications__button-container--service {
-  padding-bottom: 52px;
-  padding-top: 15px;
-}
-
 .services__block-info {
   border-top: 4px solid #fff;
   color: #fff;
@@ -2001,7 +1998,6 @@ input[type="radio"].visually-hidden {
 .services__button-container {
   text-align: center;
   padding-bottom: 50px;
-  position: relative;
 }
 
 .services__button {
@@ -2102,12 +2098,11 @@ input[type="radio"].visually-hidden {
 .modal {
   background: rgba(50, 50, 100, 0.7);
   position: absolute;
-  left: 0;
-  top: -100%;
+  left: -100%;
   z-index: 200;
   height: 100%;
   width: 100%;
-  overflow-y: auto;
+  top: 0;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -2129,8 +2124,10 @@ input[type="radio"].visually-hidden {
   z-index: 201;
   min-width: 335px;
   padding: 20px;
-  top: 5%;
+  margin-top: 20px;
   left: 50%;
+  height: 624px;
+  top: 0;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   background: #f5f5fa;
@@ -2226,9 +2223,8 @@ input[type="radio"].visually-hidden {
 }
 
 .modal__list div:first-child {
-  padding: 0;
+  padding: 0 0 20px;
   margin: 0;
-  padding-bottom: 20px;
 }
 
 .modal__list div:nth-child(5) {
@@ -2238,7 +2234,7 @@ input[type="radio"].visually-hidden {
 .modal__list div:last-child {
   text-align: center;
   padding-bottom: 0;
-  margin: 0 0 20px 0;
+  margin: 0 0 20px;
 }
 
 .modal input {
@@ -2297,15 +2293,10 @@ input[type="radio"].visually-hidden {
   position: relative;
   overflow-y: initial;
   max-width: 527px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   background: none;
-  margin-bottom: 40px;
   z-index: 0;
   left: 0;
-}
-
-.modal__btn-place {
-  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -2323,8 +2314,7 @@ input[type="radio"].visually-hidden {
   }
   .modal__list li:first-child {
     padding: 0;
-    margin: 0;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
   }
 }
 
@@ -2335,15 +2325,14 @@ input[type="radio"].visually-hidden {
 }
 
 .close {
-  top: -100%;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  left: -100%;
+  -webkit-transition: all 0.6s ease 0s;
+  transition: all 0.6s ease 0s;
+  position: absolute;
 }
 
 .open {
-  top: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
+  left: 0;
 }
 
 .bread {

@@ -22,10 +22,6 @@
     font-weight: normal;
     padding: 17px 36px;
 }
-.publications__button-container--service {
-    padding-bottom: 52px;
-    padding-top: 15px;
-}
 .services {
     // .services__block-info
     &__block-info {
@@ -76,7 +72,6 @@
     &__button-container {
         text-align: center;
         padding-bottom: 50px;
-        position: relative;
     }
     &__button {
         padding: 17px 36px;

@@ -1,5 +1,5 @@
 {
     "editor.columnSelection": false,
-    "editor.defaultFormatter": "svipas.prettier-plus",
+    "editor.defaultFormatter": "mblode.pretty-formatter",
     "editor.definitionLinkOpensInPeek": true
 }
