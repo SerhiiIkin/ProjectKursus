@@ -284,6 +284,7 @@ input[type="radio"].visually-hidden {
   text-align: center;
   background-color: #fff;
   grid-area: menu;
+  overflow-y: auto;
 }
 
 .header__menu a {
@@ -2476,7 +2477,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   border-color: transparent;
   top: 0;
-  right: 0;
+  right: 10px;
   width: 40px;
   height: 40px;
   z-index: 100;

@@ -1,5 +1,5 @@
 {
     "editor.columnSelection": false,
-    "editor.defaultFormatter": "mblode.pretty-formatter",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.definitionLinkOpensInPeek": true
 }

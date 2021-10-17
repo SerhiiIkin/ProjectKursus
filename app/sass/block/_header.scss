@@ -183,6 +183,7 @@
         text-align: center;
         background-color: $white;
         grid-area: menu;
+        overflow-y: auto;
         a {
             &:first-child {
                 background-color: $white;
@@ -339,8 +340,7 @@
             padding: 40px 0 0 18px;
             &::after {
                 content: "";
-                background:
-                    url("../img/icons/bg_mobile_points.svg") 0 0
+                background: url("../img/icons/bg_mobile_points.svg") 0 0
                     no-repeat;
                 position: absolute;
                 width: 700px;
