@@ -2117,6 +2117,34 @@ input[type="radio"].visually-hidden {
   transition: all 0.3s ease 0s;
 }
 
+.modal__btn {
+  height: 50px;
+  width: 250px;
+  position: relative;
+  padding: 0;
+}
+
+.modal__btn--snip, .modal__btn--ready {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.modal__btn-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.modal__ready {
+  opacity: 0;
+}
+
+.modal__snip {
+  opacity: 0;
+}
+
 .modal__title {
   max-width: 282px;
   color: #f0145a;
@@ -2227,24 +2255,22 @@ input[type="radio"].visually-hidden {
   padding: 20px 0 180px 10px;
 }
 
-.modal__list div {
-  margin: 0 auto;
+.modal__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal__item {
+  width: 100%;
   padding-bottom: 20px;
-}
-
-.modal__list div:first-child {
-  padding: 0 0 20px;
-  margin: 0;
-}
-
-.modal__list div:nth-child(5) {
-  padding-bottom: 8px;
-}
-
-.modal__list div:last-child {
-  text-align: center;
-  padding-bottom: 0;
-  margin: 0 0 20px;
 }
 
 .modal input {
@@ -2293,10 +2319,6 @@ input[type="radio"].visually-hidden {
 .modal__how {
   font-weight: bold;
   color: #b3b3ba;
-}
-
-.modal__btn {
-  padding: 14px 67px;
 }
 
 .modal--contact {
@@ -3359,31 +3381,18 @@ input[type="radio"].visually-hidden {
   }
 }
 
-.spinner {
-  background: url("../img/icons/spinner.svg") 0 0 no-repeat;
-  width: 31px;
-  height: 31px;
+.spinner svg {
   -webkit-animation-name: spinner;
           animation-name: spinner;
   -webkit-animation-duration: 5s;
           animation-duration: 5s;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  position: relative;
-  left: 46%;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  z-index: 0;
-  padding: 0;
-  font-size: 0;
-  margin-bottom: 20px;
+  background: transparent;
 }
 
 @-webkit-keyframes spinner {
   100% {
     -webkit-transform: rotate(1440deg);
             transform: rotate(1440deg);
-    left: 46%;
   }
 }
 
@@ -3391,8 +3400,40 @@ input[type="radio"].visually-hidden {
   100% {
     -webkit-transform: rotate(1440deg);
             transform: rotate(1440deg);
-    left: 46%;
   }
+}
+
+.snip {
+  background: transparent;
+}
+
+.snip:hover {
+  background: transparent;
+}
+
+.snip:active {
+  background: transparent;
+}
+
+.ready {
+  background: #ededf7;
+  color: #323264;
+}
+
+.ready:hover {
+  background: #e6e6f0;
+}
+
+.ready:active {
+  background: #f5f5fa;
+}
+
+.visib {
+  opacity: 1;
+}
+
+.hid {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

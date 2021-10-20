@@ -1,22 +1,11 @@
-.spinner {
-    background: url("../img/icons/spinner.svg") 0 0 no-repeat;
-    width: 31px;
-    height: 31px;
+.spinner svg {
     animation-name: spinner;
     animation-duration: 5s;
-    animation-iteration-count: 1;
-    position: relative;
-    left: 46%;
-    box-shadow: none;
-    z-index: 0;
-    padding: 0;
-    font-size: 0;
-    margin-bottom: 20px;
+    background: transparent;
 }
 
 @keyframes spinner {
     100% {
         transform: rotate(1440deg);
-        left: 46%;
     }
 }

@@ -30,34 +30,61 @@ $(document).ready(function () {
         modal();
     }
     if ($(".modal__btn").length) {
-        return time();
+        check();
     }
 });
 
-function time() {
-    // setTimeout(() => form, 6500);
-    return check();
-}
 function check() {
-    var sendBtn = document.querySelector(".modal__btn");
     var mobTel = document.getElementById("tel");
     var email = document.getElementById("email");
-    var form = document.getElementById("form");
-    form.onsubmit = function formSet() {
+    var sendBtn = document.querySelector(".modal__btn");
+    sendBtn.addEventListener("click", function checkForm() {
+        event.preventDefault();
         if (!email.value && !mobTel.value) {
             mobTel.style.outline = " 1px solid red";
             email.style.outline = " 1px solid red";
-            return false;
+            var newDiv = document.createElement("div");
+            newDiv.style = "position:absolute; color:red; font-size:14px;";
+            var newContent = document.createTextNode(
+                "Ведите номер телефона или email!"
+            );
+            newDiv.appendChild(newContent);
+            email.insertAdjacentElement("afterend", newDiv);
+            setTimeout(() => {
+                newDiv.remove();
+            }, 2000);
         }
         if (email.value || mobTel.value) {
-            sendBtn.classList.toggle("btn--finish");
-            var spinner = document.querySelector(".modal__btn-place");
-            spinner.classList.toggle("spinner");
-            sendBtn.innerHTML = "Готово!";
+            mobTel.style.outline = " 1px solid white";
+            email.style.outline = " 1px solid white";
+            send();
+            setTimeout(sub, 6000);
         }
-        return true;
-    };
+    });
 }
+function sub() {
+    var form = document.getElementById("form");
+    form.submit();
+}
+function send() {
+    var sendBtn = document.querySelector(".modal__btn");
+    var modText = document.querySelector(".modal__text");
+    var modSnip = document.querySelector(".modal__snip");
+    var modReady = document.querySelector(".modal__ready");
+    modText.classList.toggle("hid");
+    sendBtn.classList.remove("btn--blue");
+    sendBtn.classList.toggle("snip");
+    modSnip.classList.toggle("visib");
+    modSnip.classList.toggle("spinner");
+    setTimeout(() => {
+        modSnip.classList.toggle("hid");
+        modSnip.classList.remove("visib");
+        sendBtn.classList.toggle("ready");
+        modSnip.classList.remove("visib");
+        modReady.classList.toggle("visib");
+    }, 5000);
+}
+
 function aboutSlide() {
     $(".slide-js-achievement").slick({
         infinite: true,

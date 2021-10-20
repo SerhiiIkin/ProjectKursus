@@ -1,0 +1,10 @@
+.ready {
+    background: $grey_bg_alt;
+    color: $main;
+    &:hover {
+        background: $grey_separator;
+    }
+    &:active {
+        background: $grey_bg;
+    }
+}
