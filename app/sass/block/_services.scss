@@ -10,11 +10,12 @@
         opacity: 0.5;
         position: relative;
         display: inline-block;
+        padding-right: 15px;
         &::after,
         &::before {
             content: "";
             position: absolute;
-            left: 84px;
+            right: 0;
             top: 4px;
             background: $white;
             width: 7px;
@@ -71,33 +72,27 @@
                 border-radius: 18px;
             }
             &--it::before {
-                background:
-                    $white url("../img/icons/services_it.svg") center
+                background: $white url("../img/icons/services_it.svg") center
                     center no-repeat;
             }
             &--ko::before {
-                background:
-                    $white url("../img/icons/services_komp.svg") center
+                background: $white url("../img/icons/services_komp.svg") center
                     center no-repeat;
             }
             &--struk::before {
-                background:
-                    $white url("../img/icons/services_struk.svg") center
+                background: $white url("../img/icons/services_struk.svg") center
                     center no-repeat;
             }
             &--build::before {
-                background:
-                    $white url("../img/icons/services_build.svg") center
+                background: $white url("../img/icons/services_build.svg") center
                     center no-repeat;
             }
             &--protect::before {
-                background:
-                    $white url("../img/icons/services_protect.svg")
+                background: $white url("../img/icons/services_protect.svg")
                     center center no-repeat;
             }
             &--court::before {
-                background:
-                    $white url("../img/icons/services_court.svg") center
+                background: $white url("../img/icons/services_court.svg") center
                     center no-repeat;
             }
         }

@@ -7,6 +7,9 @@
 
         padding-bottom: 6px;
     }
+    &__logo-text--whitebg {
+        color: $main_alt;
+    }
     &__top-facebook--whitebg {
         svg {
             fill: $grey_text;

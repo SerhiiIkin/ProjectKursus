@@ -3,14 +3,8 @@ $(document).ready(function () {
         aboutSlide();
     }
     if ($(".consecutive-wrapper").length) {
-        var indexSlide = window.addEventListener("resize", function () {
-            if (window.innerWidth <= 992) {
-                indexSlideTop();
-            }
-            if (window.innerWidth > 992) {
-                $(".consecutive-wrapper").slick("destroy");
-            }
-        });
+        window.addEventListener("load", checkSizeWindow);
+        window.addEventListener("resize", checkSizeWindow);
     }
     if ($(".middle-slider").length) {
         indexSlideMid();
@@ -28,7 +22,28 @@ $(document).ready(function () {
         check();
     }
 });
-
+function indexSlideTop() {
+    $(".consecutive-wrapper").slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        adaptiveHeight: true,
+        dotsClass: "dots-style",
+    });
+}
+function checkSizeWindow() {
+    if (window.innerWidth >= 992) {
+        destroy();
+    }
+    if (window.innerWidth < 992) {
+        indexSlideTop();
+    }
+}
+function destroy() {
+    $(".consecutive-wrapper").slick("destroy");
+}
 function check() {
     var mobTel = document.getElementById("tel");
     var email = document.getElementById("email");
@@ -218,15 +233,44 @@ var conSlide = function () {
     btnCon();
 };
 
-var indexSlideTop = function () {
-    $(".consecutive-wrapper").slick({
-        infinite: true,
-        mobileFirst: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-        adaptiveHeight: true,
-        dotsClass: "dots-style",
-    });
-};
+$(".button__ukr").click(function () {
+    $(".button__ukr").toggleClass("current__lang");
+    $(".button__rus").removeClass("current__lang");
+    $(".button__en").removeClass("current__lang");
+    var ukrLang = document.getElementsByClassName("ukr__lang");
+    var rusLang = document.getElementsByClassName("rus__lang");
+    var enLang = document.getElementsByClassName("en__lang");
+    for (i = 0; i < ukrLang.length; i++) {
+        ukrLang[i].style.display = "initial";
+        rusLang[i].style.display = "none";
+        enLang[i].style.display = "none";
+    }
+});
+
+$(".button__rus").click(function () {
+    var ukrLang = document.getElementsByClassName("ukr__lang");
+    var rusLang = document.getElementsByClassName("rus__lang");
+    var enLang = document.getElementsByClassName("en__lang");
+    $(".button__ukr").removeClass("current__lang");
+    $(".button__rus").toggleClass("current__lang");
+    $(".button__en").removeClass("current__lang");
+    for (i = 0; i < rusLang.length; i++) {
+        ukrLang[i].style.display = "none";
+        rusLang[i].style.display = "initial";
+        enLang[i].style.display = "none";
+    }
+});
+
+$(".button__en").click(function () {
+    var ukrLang = document.getElementsByClassName("ukr__lang");
+    var rusLang = document.getElementsByClassName("rus__lang");
+    var enLang = document.getElementsByClassName("en__lang");
+    $(".button__ukr").removeClass("current__lang");
+    $(".button__rus").removeClass("current__lang");
+    $(".button__en").toggleClass("current__lang");
+    for (i = 0; i < enLang.length; i++) {
+        ukrLang[i].style.display = "none";
+        rusLang[i].style.display = "none";
+        enLang[i].style.display = " initial";
+    }
+});

@@ -16,6 +16,7 @@
     &__top-title {
         position: relative;
         color: $accent_active;
+        padding-right: 15px;
         &:hover {
             color: $accent;
         }
@@ -23,7 +24,7 @@
         &::before {
             content: "";
             position: absolute;
-            left: calc(5px - -104%);
+            right: 0;
             top: calc(4px - -7%);
             background: $accent_active;
             width: 7px;

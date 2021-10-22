@@ -23,6 +23,7 @@
         color: $accent_active;
         font-weight: bold;
         position: relative;
+        padding-right: 15px;
         &:hover {
             color: $accent;
         }
@@ -30,7 +31,7 @@
         &::before {
             content: "";
             position: absolute;
-            left: 92px;
+            right: 0;
             top: 6px;
             background: $accent_active;
             width: 7px;
