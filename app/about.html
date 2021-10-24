@@ -16,7 +16,7 @@
                 <div class="header__contant">
                     <div class="header__top header__top--about">
                         <div class="header__top-buttons">
-                            <button tabindex="1" aria-label="вибрать украинский язик" type="button" class="header__button header__button--whitebg button__ukr current__lang">
+                            <button tabindex="1" aria-label="вибрать украинский язик" type="button" class="header__button header__button--whitebg button__ukr">
                                 ук
                             </button>
                             <button tabindex="2" aria-label="вибрать руский язик" type="button" class="header__button header__button--whitebg button__rus">
@@ -27,7 +27,11 @@
                             </button>
                         </div>
                         <div class="header__top-links">
-                            <a class="header__top-adress header__top-adress--whitebg adress" href="#">Одеса, Адміральський пр., 3</a>
+                            <a class="header__top-adress header__top-adress--whitebg adress" href="#">
+                                <div class="ukr__lang">Одеса, Адміральський пр., 3</div>
+                                <div class="rus__lang">Одесса, Адмиральский пр., 3</div>
+                                <div class="en__lang">Odessa, Admiral Avenue, 3</div>
+                            </a>
                             <a href="tel:+380503901591" class="header__tel header__tel--whitebg tel">+38 (050) 390 15 91</a>
                             <a href="#" class="header__top-facebook header__top-facebook--whitebg facebook-ico">
                                 <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,11 +60,36 @@
                                 </defs>
                             </svg>
                         </a>
-                        <a href="about.html" class="header__menu-link header__menu-link--current">о нас</a>
-                        <a href="services.html" class="header__menu-link">послуги</a>
-                        <a href="team.html" class="header__menu-link">команда</a>
-                        <a href="publication.html" class="header__menu-link">публікації</a>
-                        <a href="contact.html" class="header__menu-link">контакти</a>
+
+                        <a href="about.html" class="header__menu-link header__menu-link--current">
+                            <span class="ukr__lang">о нас</span>
+                            <span class="rus__lang">о нас</span>
+                            <span class="en__lang">about us</span>
+                        </a>
+
+                        <a href="services.html" class="header__menu-link ">
+                            <span class="ukr__lang">послуги</span>
+                            <span class="rus__lang">услуги</span>
+                            <span class="en__lang">services</span>
+                        </a>
+
+                        <a href="team.html" class="header__menu-link ">
+                            <span class="ukr__lang">команда</span>
+                            <span class="rus__lang">команда</span>
+                            <span class="en__lang">team</span>
+                        </a>
+
+                        <a href="publication.html" class="header__menu-link">
+                            <span class="ukr__lang">публікації</span>
+                            <span class="rus__lang">публикации</span>
+                            <span class="en__lang">publications</span>
+                        </a>
+                        <a href="contact.html" class="header__menu-link">
+                            <span class="ukr__lang">контакти</span>
+                            <span class="rus__lang">контакти</span>
+                            <span class="en__lang">contacts</span>
+                        </a>
+
                     </nav>
                     <div class="header__logo-bread">
                         <a aria-label="переход на главную" href="index.html" class="header__logo header__logo--whitebg">
@@ -79,7 +108,11 @@
                         </a>
 
                         <div class="header__bread">
-                            <a href="about.html" class="header__bread header__bread--whitebg bread">о нас</a>
+                            <a href="about.html" class="header__bread header__bread--whitebg bread">
+                                <span class="ukr__lang">о нас</span>
+                                <span class="rus__lang">о нас</span>
+                                <span class="en__lang">about us</span>
+                            </a>
                         </div>
                     </div>
                     <div class="header__burger-menu">
@@ -92,13 +125,21 @@
             <section class="back">
                 <div class="back__content">
                     <h1 class="back__title hero-mobil">
-                        Перевертаємо уявлення про юридичні послуги.
+                        <div class="ukr__lang">Перевертаємо уявлення про юридичні послуги.</div>
+                        <div class="rus__lang">Переворачиваем представление о юридических услугах.</div>
+                        <div class="en__lang">We turn the idea of legal services.</div>
                     </h1>
                     <div class="back__text paragraf-about">
-                        Консолідуючи багаторічний досвід і практику, юристи компанії супроводжують складні проекти і досягають прийняття ряду важливих для галузі рішень. Багато з них формують практику застосування морського права в Україні.
+                        <div class="ukr__lang">Консолідуючи багаторічний досвід і практику, юристи компанії супроводжують складні проекти і досягають прийняття ряду важливих для галузі рішень. Багато з них формують практику застосування морського права в Україні.</div>
+                        <div class="rus__lang">Консолидируя многолетний опыт и практику, юристы компании сопровождают сложные проекты и достигают принятия ряда важных для отрасли решений. Многие из них формируют практику применения морского права в Украине.</div>
+                        <div class="en__lang">Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.</div>
+
                     </div>
                     <div class="back__text paragraf-about">
-                        Prolegals – надійний бізнес-партнер, що підтверджується стабільним співробітництвом з міжнародними юридичними фірмами, довірою великих українських і міжнародних компаній, визнанням професійних рейтингів.
+                        <div class="ukr__lang">Prolegals – надійний бізнес-партнер, що підтверджується стабільним співробітництвом з міжнародними юридичними фірмами, довірою великих українських і міжнародних компаній, визнанням професійних рейтингів.</div>
+                        <div class="rus__lang">Prolegals - надежный бизнес-партнер, подтверждается стабильным сотрудничеством с международными юридическими фирмами, доверием крупных украинских и международных компаний, признанием профессиональных рейтингов.</div>
+                        <div class="en__lang">Prolegals is a reliable business partner, which is confirmed by stable cooperation with international law firms, trust of large Ukrainian and international companies, recognition of professional ratings.
+                        </div>
                     </div>
                 </div>
                 <div class="back__antal">
@@ -107,7 +148,9 @@
                             10+
                         </div>
                         <div class="back__antal-item__text text-18-21">
-                            років релевантного досвіду
+                            <div class="ukr__lang">років релевантного досвіду</div>
+                            <div class="rus__lang">лет релевантного опыта</div>
+                            <div class="en__lang">years of relevant experience</div>
                         </div>
                     </div>
                     <div class="back__antal-item">
@@ -115,7 +158,10 @@
                             30+
                         </div>
                         <div class="back__antal-item__text text-18-21">
-                            активних клієнтів, які довіряють нам свої доручення щомісячно
+                            <div class="ukr__lang">активних клієнтів, які довіряють нам свої доручення щомісячно</div>
+                            <div class="rus__lang">активных клиентов, которые доверяют нам свои поручения ежемесячно</div>
+                            <div class="en__lang">active clients who entrust us with their orders on a monthly basis</div>
+
                         </div>
                     </div>
                     <div class="back__antal-item">
@@ -123,30 +169,45 @@
                             500+
                         </div>
                         <div class="back__antal-item__text text-18-21">
-                            годин роботи «pro bono» щорічно
+                            <div class="ukr__lang">годин роботи «pro bono» щорічно</div>
+                            <div class="rus__lang">часов работы «pro bono» ежегодно</div>
+                            <div class="en__lang">hours of work "pro bono" annually</div>
                         </div>
                     </div>
                 </div>
             </section>
         </div>
         <div class="team">
-            <div class="team__text">Команда</div>
+            <div class="team__text">
+                <div class="ukr__lang">Команда</div>
+                <div class="rus__lang">Команда</div>
+                <div class="en__lang">Team</div>
+            </div>
         </div>
         <div class="container">
             <section class="quality">
                 <div class="quality__content">
                     <div class="quality__text paragraf-about">
-                        Історично незмінна юридична професія почала переформатовуватись в останні роки. Клієнти це відчувають, але юридичні фірми все ще опираються еволюції. Клієнти потребують зручності, простоти, прозорої оплати. Google, IBM WatsОn, Symantec Clearwell доводять, що технологічна революція в юридичних послугах розпочалася і стала неминучою.
+                        <div class="ukr__lang">Історично незмінна юридична професія почала переформатовуватись в останні роки. Клієнти це відчувають, але юридичні фірми все ще опираються еволюції. Клієнти потребують зручності, простоти, прозорої оплати. Google, IBM WatsОn, Symantec Clearwell доводять, що технологічна революція в юридичних послугах розпочалася і стала неминучою.</div>
+                        <div class="rus__lang">Исторически неизменная юридическая профессия начала переформатироваться в последние годы. Клиенты это чувствуют, но юридические фирмы все еще опираются эволюции. Клиенты требуют удобства, простоты, прозрачной оплаты. Google, IBM WatsОn, Symantec Clearwell доказывают, что технологическая революция в юридических услугах началась и стала неизбежной.</div>
+                        <div class="en__lang">The historically unchanging legal profession has begun to reformat in recent years. Clients feel it, but law firms are still resisting evolution. Customers need convenience, simplicity, transparent payment. Google, IBM WatsOn, Symantec Clearwell argue that a technological revolution in legal services has begun and has become inevitable.</div>
+
                     </div>
                     <div class="quality__text paragraf-about">
-                        Якість — це те, про що ми піклуємося найбільше.
+                        <div class="ukr__lang">Якість — це те, про що ми піклуємося найбільше.</div>
+                        <div class="rus__lang">Качество - это то, о чем мы заботимся больше всего.</div>
+                        <div class="en__lang">Quality is what we care about the most.</div>
                     </div>
                     <div class="quality__text paragraf-about">
-                        Все просто. Якщо ви не задоволені нашою роботою, ми повернемо гроші. Ми довіряємо нашим клієнтам. І ми хочемо, щоб клієнти нам теж довіряли.
+                        <div class="ukr__lang">Все просто. Якщо ви не задоволені нашою роботою, ми повернемо гроші. Ми довіряємо нашим клієнтам. І ми хочемо, щоб клієнти нам теж довіряли.</div>
+                        <div class="rus__lang">Все просто. Если вы не удовлетворены нашей работой, мы вернем деньги. Мы доверяем нашим клиентам. И мы хотим, чтобы клиенты нам тоже доверяли.</div>
+                        <div class="en__lang">Everything is simple. If you are not satisfied with our work, we will refund your money. We trust our customers. And we want customers to trust us too.</div>
                     </div>
                 </div>
                 <h2 class="quality__title hero-mobil">
-                    Якість — це те, про що ми піклуємося найбільше.
+                    <div class="ukr__lang">Якість — це те, про що ми піклуємося найбільше.</div>
+                    <div class="rus__lang">Качество - это то, о чем мы заботимся больше всего.</div>
+                    <div class="en__lang">Quality is what we care about the most.</div>
                 </h2>
             </section>
         </div>
@@ -154,7 +215,9 @@
             <div class="container">
                 <div class="slider-about">
                     <h3 class="slider-about__title h3-caps">
-                        Досягнення
+                        <div class="ukr__lang">Досягнення</div>
+                        <div class="rus__lang">Достижения</div>
+                        <div class="en__lang">Achievement</div>
                     </h3>
                     <div class="slider-about__content slide-js-achievement">
                         <div class="slider-about__item">
@@ -174,7 +237,32 @@
                         </div>
                         <div class="slider-about__item">
                             <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-ulf.jpg" alt=""/>
+                                <img class="img-responsive" src="img/slider_about-ulf.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="slider-about__item">
+                            <div class="slider-about__item-container">
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="slider-about__item">
+                            <div class="slider-about__item-container">
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="slider-about__item">
+                            <div class="slider-about__item-container">
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="slider-about__item">
+                            <div class="slider-about__item-container">
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
+                            </div>
+                        </div>
+                        <div class="slider-about__item">
+                            <div class="slider-about__item-container">
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="slider-about__item">
@@ -184,37 +272,12 @@
                         </div>
                         <div class="slider-about__item">
                             <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="slider-about__item">
                             <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="slider-about__item">
-                            <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="slider-about__item">
-                            <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="slider-about__item">
-                            <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="slider-about__item">
-                            <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
-                            </div>
-                        </div>
-                        <div class="slider-about__item">
-                            <div class="slider-about__item-container">
-                                <img class="img-responsive" src="../img/slider_about-legal.jpg" alt=""/>
+                                <img class="img-responsive" src="img/slider_about-legal.jpg" alt=""/>
                             </div>
                         </div>
                     </div>
@@ -222,8 +285,16 @@
                 <footer class="footer">
                     <div class="footer__container">
                         <div class="footer__addres">
-                            <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__street">Одеса, Адміральський пр., 3</a>
-                            <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__map">Подивитися на мапі</a>
+                            <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__street">
+                                <div class="ukr__lang">Одеса, Адміральський пр., 3</div>
+                                <div class="rus__lang">Одесса, Адмиральский пр., 3</div>
+                                <div class="en__lang">Odessa, Admiral Avenue, 3</div>
+                            </a>
+                            <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__map">
+                                <div class="ukr__lang">Подивитися на мапі</div>
+                                <div class="rus__lang">Посмотреть на карте</div>
+                                <div class="en__lang">Look at the map</div>
+                            </a>
                         </div>
 
                         <div class="footer__tel">
@@ -238,7 +309,9 @@
                             <a aria-label="написать емеил на contact@hlegals.net " href="mailto:contact@hlegals.net" class="footer__mail">contact@hlegals.net</a>
                         </div>
                         <div class="footer__tob">
-                            © 2021 ТОВ Юридична компанія «HLEGALS»
+                            <div class="ukr__lang">© 2021 ТОВ Юридична компанія «HLEGALS»</div>
+                            <div class="rus__lang">© 2021 ООО Юридическая компания «HLEGALS»</div>
+                            <div class="en__lang">© 2021 HLEGALS Law Firm LLC</div>
                         </div>
                     </div>
                 </footer>
@@ -246,4 +319,4 @@
         </div>
         <script src="js/all.js"></script>
     </body>
-</html>
+</html></body></html>

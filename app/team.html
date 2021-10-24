@@ -15,19 +15,23 @@
                 <div class="header__container header__container--whitebg container">
                     <div class="header__contant">
                         <div class="header__top">
-                            <button tabindex="1" aria-label="вибрать украинский язик" type="button" class="header__button header__button--whitebg button__ukr current__lang">
-
-                                ук
-                            </button>
-                            <button tabindex="2" aria-label="вибрать руский язик" type="button" class="header__button header__button--whitebg button__rus">
-                                ру
-                            </button>
-                            <button tabindex="3" aria-label="вибрать английский язик" type="button" class="header__button header__button--whitebg button__en">
-                                en
-                            </button>
-
+                            <div class="header__top-buttons">
+                                <button tabindex="1" aria-label="вибрать украинский язик" type="button" class="header__button header__button--whitebg button__ukr">
+                                    ук
+                                </button>
+                                <button tabindex="2" aria-label="вибрать руский язик" type="button" class="header__button header__button--whitebg button__rus">
+                                    ру
+                                </button>
+                                <button tabindex="3" aria-label="вибрать английский язик" type="button" class="header__button header__button--whitebg button__en">
+                                    en
+                                </button>
+                            </div>
                             <div class="header__top-links">
-                                <a class="header__top-adress header__top-adress--whitebg adress" href="#">Одеса, Адміральський пр., 3</a>
+                                <a class="header__top-adress header__top-adress--whitebg adress" href="#">
+                                    <span class="ukr__lang">Одеса, Адміральський пр., 3</span>
+                                    <span class="rus__lang">Одесса, Адмиральский пр., 3</span>
+                                    <span class="en__lang">Odessa, Admiral Avenue, 3</span>
+                                </a>
                                 <a href="tel:+380503901591" class="header__tel header__tel--whitebg tel">+38 (050) 390 15 91</a>
                                 <a href="#" class="header__top-facebook header__top-facebook--whitebg facebook-ico">
                                     <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -56,11 +60,34 @@
                                     </defs>
                                 </svg>
                             </a>
-                            <a href="about.html" class="header__menu-link">о нас</a>
-                            <a href="services.html" class="header__menu-link">послуги</a>
-                            <a href="team.html" class="header__menu-link header__menu-link--current">команда</a>
-                            <a href="publication.html" class="header__menu-link">публікації</a>
-                            <a href="contact.html" class="header__menu-link">контакти</a>
+                            <a href="about.html" class="header__menu-link">
+                                <span class="ukr__lang">о нас</span>
+                                <span class="rus__lang">о нас</span>
+                                <span class="en__lang">about us</span>
+                            </a>
+
+                            <a href="services.html" class="header__menu-link">
+                                <span class="ukr__lang">послуги</span>
+                                <span class="rus__lang">услуги</span>
+                                <span class="en__lang">services</span>
+                            </a>
+
+                            <a href="team.html" class="header__menu-link header__menu-link--current">
+                                <span class="ukr__lang">команда</span>
+                                <span class="rus__lang">команда</span>
+                                <span class="en__lang">team</span>
+                            </a>
+
+                            <a href="publication.html" class="header__menu-link">
+                                <span class="ukr__lang">публікації</span>
+                                <span class="rus__lang">публикации</span>
+                                <span class="en__lang">publications</span>
+                            </a>
+                            <a href="contact.html" class="header__menu-link">
+                                <span class="ukr__lang">контакти</span>
+                                <span class="rus__lang">контакти</span>
+                                <span class="en__lang">contacts</span>
+                            </a>
                         </nav>
                         <div class="header__logo-bread">
                             <a aria-label="переход на главную" href="index.html" class="header__logo header__logo--whitebg">
@@ -79,7 +106,11 @@
                             </a>
 
                             <div class="header__bread">
-                                <a href="team.html" class="header__bread header__bread--whitebg bread">команда</a>
+                                <a href="team.html" class="header__bread header__bread--whitebg bread">
+                                    <span class="ukr__lang">команда</span>
+                                    <span class="rus__lang">команда</span>
+                                    <span class="en__lang">team</span>
+                                </a>
                             </div>
                         </div>
 
@@ -92,7 +123,9 @@
             <main class="main">
                 <section class="team-side container">
                     <h2 class="team-side__title hero-mobil">
-                        Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.
+                        <span class="ukr__lang">Ми звикли брати на себе відповідальність та завжди гарантуємо чесну, вчасну допомогу, навіть у ситуаціях, коли більшість безсилі.</span>
+                        <span class="rus__lang">Мы привыкли брать на себя ответственность и всегда гарантируем честную, своевременную помощь, даже в ситуациях, когда большинство бессильны.</span>
+                        <span class="en__lang">We are used to taking responsibility and always guarantee honest, timely help, even in situations where most are powerless.</span>
                     </h2>
                     <div class="team-side__container">
                         <div class="team-side__items">
@@ -106,10 +139,15 @@
                                     </div>
                                     <div class="team-side__item-content">
                                         <div class="team-side__name">
-                                            Денис Майборода
+                                            <span class="ukr__lang">Денис Майборода</span>
+                                            <span class="rus__lang">Денис Майборода</span>
+                                            <span class="en__lang">Denis Mayboroda</span>
                                         </div>
                                         <div class="team-side__wd">
-                                            Керуючий партнер
+
+                                            <span class="ukr__lang">Керуючий партнер</span>
+                                            <span class="rus__lang">Управляющий партнер</span>
+                                            <span class="en__lang">Managing partner</span>
                                         </div>
                                         <div class="team-side__arrow"></div>
                                     </div>
@@ -125,7 +163,9 @@
                                     </div>
                                     <div class="team-side__item-content">
                                         <div class="team-side__name">
-                                            Оксана Кобзар
+                                            <span class="ukr__lang">Оксана Кобзар</span>
+                                            <span class="rus__lang">Оксана Кобзар</span>
+                                            <span class="en__lang">Oksana Kobzar</span>
                                         </div>
                                         <div class="team-side__wd">
                                             Equity partner
@@ -144,7 +184,9 @@
                                     </div>
                                     <div class="team-side__item-content">
                                         <div class="team-side__name">
-                                            Владислав Мельник
+                                            <span class="ukr__lang">Владислав Мельник</span>
+                                            <span class="rus__lang">Владислав Мельник</span>
+                                            <span class="en__lang">Vladislav Melnik</span>
                                         </div>
                                         <div class="team-side__wd">
                                             Associate
@@ -163,7 +205,9 @@
                                     </div>
                                     <div class="team-side__item-content">
                                         <div class="team-side__name">
-                                            Юлія Гудименко
+                                            <span class="ukr__lang">Юлія Гудименко</span>
+                                            <span class="rus__lang">Юлия Гудименко</span>
+                                            <span class="en__lang">Yulia Hudymenko</span>
                                         </div>
                                         <div class="team-side__wd">
                                             Associate
@@ -182,7 +226,9 @@
                                     </div>
                                     <div class="team-side__item-content">
                                         <div class="team-side__name">
-                                            Оксана Кобзар
+                                            <span class="ukr__lang">Оксана Кобзар</span>
+                                            <span class="rus__lang">Оксана Кобзар</span>
+                                            <span class="en__lang">Oksana Kobzar</span>
                                         </div>
                                         <div class="team-side__wd">
                                             Equity partner
@@ -201,7 +247,9 @@
                                     </div>
                                     <div class="team-side__item-content">
                                         <div class="team-side__name">
-                                            Владислав Мельник
+                                            <span class="ukr__lang">Владислав Мельник</span>
+                                            <span class="rus__lang">Владислав Мельник</span>
+                                            <span class="en__lang">Vladislav Melnik</span>
                                         </div>
                                         <div class="team-side__wd">
                                             Associate
@@ -219,8 +267,16 @@
                     <footer class="footer">
                         <div class="footer__container">
                             <div class="footer__addres">
-                                <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__street">Одеса, Адміральський пр., 3</a>
-                                <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__map">Подивитися на мапі</a>
+                                <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__street">
+                                    <div class="ukr__lang">Одеса, Адміральський пр., 3</div>
+                                    <div class="rus__lang">Одесса, Адмиральский пр., 3</div>
+                                    <div class="en__lang">Odessa, Admiral Avenue, 3</div>
+                                </a>
+                                <a aria-label="переход на гугл карти по адресу Одеса, Адміральський пр., 3 " href="https://goo.gl/maps/CQF157WzSKJqaThv8" class="footer__map">
+                                    <div class="ukr__lang">Подивитися на мапі</div>
+                                    <div class="rus__lang">Посмотреть на карте</div>
+                                    <div class="en__lang">Look at the map</div>
+                                </a>
                             </div>
                             <div class="footer__tel">
                                 <a aria-label="переход на страницу фейсбук" href="#" class="footer__fb">
@@ -234,7 +290,9 @@
                                 <a aria-label="написать емеил на contact@hlegals.net " href="mailto:contact@hlegals.net" class="footer__mail">contact@hlegals.net</a>
                             </div>
                             <div class="footer__tob">
-                                © 2021 ТОВ Юридична компанія «HLEGALS»
+                                <div class="ukr__lang">© 2021 ТОВ Юридична компанія «HLEGALS»</div>
+                                <div class="rus__lang">© 2021 ООО Юридическая компания «HLEGALS»</div>
+                                <div class="en__lang">© 2021 HLEGALS Law Firm LLC</div>
                             </div>
                         </div>
                     </footer>

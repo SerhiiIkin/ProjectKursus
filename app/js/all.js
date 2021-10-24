@@ -26,6 +26,9 @@ $(document).ready(function () {
     if ($(".modal__btn").length) {
         check();
     }
+    if ($(".button__ukr").length) {
+        ukrLand();
+    }
 });
 function indexSlideTop() {
     $(".consecutive-wrapper").slick({
@@ -142,13 +145,14 @@ var indexSlideMid = function () {
 
 var menu = function () {
     menuBurger = document.querySelector(".header__burger-menu");
-    menuBurger.addEventListener("click", function openNav() {
+    menuBurger.addEventListener("click", openNav);
+    function openNav() {
         list = document.querySelector(".header__burger-menu-button");
         list.classList.toggle("activet");
         meny = document.querySelector(".header__menu");
         meny.classList.toggle("vis");
         document.body.classList.toggle("lock");
-    });
+    }
 };
 
 function modal() {
@@ -166,7 +170,6 @@ function modal() {
         nyDiv.style.cssText = "position:absolute;";
         var coords = getCoords(modalWin);
         nyDiv.style.top = coords.top + "px";
-        nyDiv.innerHTML = "hello world";
         document.body.append(nyDiv);
         nyDiv.scrollIntoView({ block: "center" });
         nyDiv.remove();
@@ -191,53 +194,38 @@ function modal() {
     closeMod.addEventListener("click", closeModalW);
 }
 
-var conSlide = function () {
+function conSlide() {
     var allBtn = document.querySelectorAll(".consecutive__button");
     var blocks = document.querySelectorAll(".consecutive__slide");
-    var btnCon = function () {
-        var index;
-        for (index = 0; index < allBtn.length; index++) {
-            if (index == 0) {
-                allBtn[0].addEventListener("click", function () {
-                    clear();
-                    allBtn[0].classList.toggle("red");
-                    blocks[0].classList.toggle("block-open");
+    allBtn.forEach(onTabClick);
+    allBtn[0].click();
+    function onTabClick(item) {
+        item.addEventListener("click", function () {
+            var currentBtn = item;
+            var tabId = currentBtn.getAttribute("data-tab");
+            var currentTab = document.querySelector(tabId);
+            if (!currentBtn.classList.contains("red")) {
+                allBtn.forEach(function (item) {
+                    item.classList.remove("red");
                 });
-            }
-            if (index == 1) {
-                allBtn[1].addEventListener("click", function () {
-                    clear();
-                    allBtn[1].classList.toggle("red");
-                    blocks[1].classList.toggle("block-open");
+                blocks.forEach(function (item) {
+                    item.classList.remove("block-open");
                 });
+                currentBtn.classList.add("red");
+                currentTab.classList.add("block-open");
             }
-            if (index == 2) {
-                allBtn[2].addEventListener("click", function () {
-                    clear();
-                    allBtn[2].classList.toggle("red");
-                    blocks[2].classList.toggle("block-open");
-                });
-            }
-            if (index == 3) {
-                allBtn[3].addEventListener("click", function () {
-                    clear();
-                    allBtn[3].classList.toggle("red");
-                    blocks[3].classList.toggle("block-open");
-                });
-            }
-        }
-        index = 0;
-    };
-    var clear = function () {
-        var i;
-        for (i = 0; i < allBtn.length; i++) {
-            allBtn[i].classList.remove("red");
-            blocks[i].classList.remove("block-open");
-        }
-    };
-    btnCon();
-};
-
+        });
+    }
+}
+function ukrLand() {
+    $(".button__ukr").click();
+}
+function rusLand() {
+    $(".button__rus").click();
+}
+function enLand() {
+    $(".button__en").click();
+}
 $(".button__ukr").click(function () {
     $(".button__ukr").toggleClass("current__lang");
     $(".button__rus").removeClass("current__lang");
@@ -245,6 +233,12 @@ $(".button__ukr").click(function () {
     var ukrLang = document.getElementsByClassName("ukr__lang");
     var rusLang = document.getElementsByClassName("rus__lang");
     var enLang = document.getElementsByClassName("en__lang");
+    if ($(".button__ukr").hasClass("current__lang")) {
+        $("#name").attr("placeholder", "Iм'я");
+        $("#messege").attr("placeholder", "Повiдомлення");
+        $("#tel").attr("placeholder", "Номер телефона");
+        $("#email").attr("placeholder", "Чи email");
+    }
     for (i = 0; i < ukrLang.length; i++) {
         ukrLang[i].style.display = "initial";
         rusLang[i].style.display = "none";
@@ -259,6 +253,12 @@ $(".button__rus").click(function () {
     $(".button__ukr").removeClass("current__lang");
     $(".button__rus").toggleClass("current__lang");
     $(".button__en").removeClass("current__lang");
+    if ($(".button__rus").hasClass("current__lang")) {
+        $("#name").attr("placeholder", "Имя");
+        $("#messege").attr("placeholder", "Cообщение");
+        $("#tel").attr("placeholder", "Номер телефона");
+        $("#email").attr("placeholder", "Или email");
+    }
     for (i = 0; i < rusLang.length; i++) {
         ukrLang[i].style.display = "none";
         rusLang[i].style.display = "initial";
@@ -273,6 +273,12 @@ $(".button__en").click(function () {
     $(".button__ukr").removeClass("current__lang");
     $(".button__rus").removeClass("current__lang");
     $(".button__en").toggleClass("current__lang");
+    if ($(".button__en").hasClass("current__lang")) {
+        $("#name").attr("placeholder", "Name");
+        $("#messege").attr("placeholder", "Messages");
+        $("#tel").attr("placeholder", "Phone number");
+        $("#email").attr("placeholder", "Or email");
+    }
     for (i = 0; i < enLang.length; i++) {
         ukrLang[i].style.display = "none";
         rusLang[i].style.display = "none";

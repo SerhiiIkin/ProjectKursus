@@ -123,6 +123,10 @@ input[type="radio"].visually-hidden {
   background-color: #f0145a;
 }
 
+.header__menu-link--serv::after {
+  background-color: #fff;
+}
+
 .header__bg {
   position: relative;
 }
@@ -312,7 +316,7 @@ input[type="radio"].visually-hidden {
 
 @media (min-width: 768px) {
   .header__logo-text {
-    font-size: 17px;
+    font-size: 14px;
   }
   .header__container {
     padding-bottom: 20px;
@@ -754,6 +758,7 @@ input[type="radio"].visually-hidden {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 .hoved__arrow svg {
@@ -871,7 +876,7 @@ input[type="radio"].visually-hidden {
     padding-left: 10px;
   }
   .consecutive__block {
-    padding-top: 50px;
+    padding-top: 20px;
   }
   .consecutive__button {
     border: 0;
@@ -917,6 +922,10 @@ input[type="radio"].visually-hidden {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.services__button {
+  display: inline-block;
 }
 
 .services__top-title {
@@ -1882,6 +1891,12 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   line-height: 22px;
   color: #fff;
+}
+
+.paragraph--grey {
+  font-size: 16px;
+  line-height: 22px;
+  color: #b3b3ba;
 }
 
 .header__container--services::before, .header__container--services::after {

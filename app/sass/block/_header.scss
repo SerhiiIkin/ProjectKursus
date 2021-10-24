@@ -40,6 +40,11 @@
                 background-color: $accent;
             }
         }
+        &--serv {
+            &::after {
+                background-color: $white;
+            }
+        }
     }
     &__bg {
         position: relative;
@@ -208,7 +213,7 @@
 @media (min-width: 768px) {
     .header {
         &__logo-text {
-            font-size: 17px;
+            font-size: 14px;
         }
         &__container {
             padding-bottom: 20px;

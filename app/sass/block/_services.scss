@@ -4,6 +4,9 @@
         display: flex;
         flex-direction: column;
     }
+    &__button {
+        display: inline-block;
+    }
     // .services__top-title
     &__top-title {
         color: $white;

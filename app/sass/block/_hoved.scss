@@ -29,6 +29,7 @@
     &__arrow {
         display: flex;
         align-items: center;
+        z-index: 2;
     }
     &__arrow svg {
         transform: rotate(0deg);
