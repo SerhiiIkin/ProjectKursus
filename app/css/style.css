@@ -41,7 +41,7 @@ body {
 
 .container {
   max-width: 1360px;
-  min-width: 375px;
+  min-width: 350px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -70,18 +70,10 @@ input[type="radio"].visually-hidden {
 }
 
 .header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   padding: 18px 12px 28px 18px;
 }
 
 .header__logo {
-  grid-area: logo;
   margin-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,6 +91,8 @@ input[type="radio"].visually-hidden {
 }
 
 .header__logo-bread {
+  grid-column: 1/2;
+  grid-row: 2/3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,7 +151,8 @@ input[type="radio"].visually-hidden {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 3px;
-  grid-area: menu;
+  grid-row: 2/3;
+  grid-column: 2/3;
   justify-self: end;
 }
 
@@ -207,39 +202,26 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 1fr auto;
-  grid-template-areas: "head head" "logo menu";
 }
 
 .header__top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  grid-row: 1/2;
+  grid-column: 1/3;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  grid-area: head;
-}
-
-.header__top-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 9px;
 }
 
 .header__button {
-  cursor: pointer;
-  outline: none;
   font-size: 12px;
   line-height: 14px;
   text-align: center;
   letter-spacing: 1px;
   color: #fff;
   background: transparent;
-  border: none;
   text-transform: uppercase;
   padding: 5px;
 }
@@ -325,23 +307,24 @@ input[type="radio"].visually-hidden {
     width: 156px;
     height: 63px;
   }
+  .header__contant {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
   .header__logo-bread {
     padding-top: 17px;
+    grid-row: 2/3;
+    grid-column: 1/-1;
   }
   .header__bg::before {
     -webkit-transform: translate(-70%, -17%);
             transform: translate(-70%, -17%);
   }
-  .header__contant {
-    display: grid;
-    grid-template-rows: auto auto auto;
-    grid-template-columns: auto;
-    grid-template-areas: "head" "logo" "menu";
-  }
   .header__burger-menu {
     display: none;
   }
   .header__menu {
+    grid-row: 3/4;
+    grid-column: 1/3;
     position: relative;
     display: inline-block;
     vertical-align: top;
@@ -352,7 +335,6 @@ input[type="radio"].visually-hidden {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    grid-area: menu;
     top: 0;
     padding-right: 15px;
   }
@@ -384,14 +366,27 @@ input[type="radio"].visually-hidden {
   }
   .header__top {
     padding-right: 9px;
-    padding-top: 12px;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 24px;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    grid-row: 1/2;
+    grid-column: 1/5;
+  }
+  .header__top-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .header__top-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .header__tel {
     margin-left: 30px;
@@ -434,7 +429,7 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1035px) {
   .header__top-buttons {
     padding-top: 34px;
   }
@@ -442,11 +437,23 @@ input[type="radio"].visually-hidden {
     padding-right: 15px;
     padding-top: 34px;
   }
+  .header__top {
+    grid-row: 1/2;
+    grid-column: 2/-1;
+  }
+  .header__logo-bread {
+    grid-column: 1/2;
+    grid-row: 1/3;
+  }
+  .header__bread {
+    margin-top: 8px;
+  }
   .header__menu {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
     text-align: right;
+    grid-row: 2/3;
   }
   .header__container {
     padding: 40px 0 0 18px;
@@ -467,16 +474,14 @@ input[type="radio"].visually-hidden {
     -webkit-transform: translate(-70%, -17%);
             transform: translate(-70%, -17%);
   }
-  .header__contant {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "logo head" "logo menu";
-  }
   .header__logo {
     -ms-flex-item-align: center;
         align-self: center;
     padding-left: 0;
+  }
+  .header__contant {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
   }
 }
 
@@ -1926,21 +1931,6 @@ input[type="radio"].visually-hidden {
   }
 }
 
-@media (min-width: 992px) {
-  .header__top--services {
-    padding-top: 10px;
-    padding-right: 5px;
-  }
-  .header__logo-bread {
-    padding-top: 18px;
-    grid-column: 1/2;
-    grid-row: 1/3;
-  }
-  .header__menu--services {
-    padding-right: 5px;
-  }
-}
-
 .vis {
   top: 0;
   height: 100vh;
@@ -2230,7 +2220,6 @@ input[type="radio"].visually-hidden {
 }
 
 .modal__close:active {
-  background: #ededf7;
   border-radius: 12px;
   color: #323264;
 }
@@ -2398,15 +2387,17 @@ input[type="radio"].visually-hidden {
   color: #fff;
   position: relative;
   margin-left: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 42px;
 }
 
 .bread::before, .bread::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 0;
   height: 24px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
 }
 
 .bread::before {
@@ -2557,7 +2548,6 @@ input[type="radio"].visually-hidden {
 .activet:active {
   background: #ededf7;
   border-radius: 12px;
-  max-width: 120%;
 }
 
 .activet:active::after, .activet:active::before {
@@ -3463,14 +3453,6 @@ input[type="radio"].visually-hidden {
 
 .hid {
   opacity: 0;
-}
-
-.rus__lang {
-  display: none;
-}
-
-.en__lang {
-  display: none;
 }
 
 .current__lang {

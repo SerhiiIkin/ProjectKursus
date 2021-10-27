@@ -21,9 +21,6 @@ $(document).ready(function () {
     if ($(".modal__btn").length) {
         check();
     }
-    if ($(".button__ukr").length) {
-        ukrLand();
-    }
 });
 function indexSlideTop() {
     $(".consecutive-wrapper").slick({
@@ -154,21 +151,6 @@ function modal() {
     var openMod = document.querySelector(".services__button");
     var modalWin = document.querySelector(".modal");
     var closeMod = document.querySelector(".modal__close");
-    var nyDiv = document.createElement("div");
-    function getCoords() {
-        var cord = modalWin.getBoundingClientRect();
-        return {
-            top: cord.height / 2 + scrollY,
-        };
-    }
-    function createScroll() {
-        nyDiv.style.cssText = "position:absolute;";
-        var coords = getCoords(modalWin);
-        nyDiv.style.top = coords.top + "px";
-        document.body.append(nyDiv);
-        nyDiv.scrollIntoView({ block: "center" });
-        nyDiv.remove();
-    }
     function getCoordsModal() {
         var scrM = window.scrollY;
         modalWin.style.top = scrM + "px";
@@ -182,7 +164,6 @@ function modal() {
         modalWin.classList.remove("close");
         modalWin.classList.toggle("open");
         getCoordsModal();
-        createScroll();
         document.body.style.overflow = "hidden";
     }
     openMod.addEventListener("click", openModW);
@@ -212,71 +193,3 @@ function conSlide() {
         });
     }
 }
-function ukrLand() {
-    $(".button__ukr").click();
-}
-function rusLand() {
-    $(".button__rus").click();
-}
-function enLand() {
-    $(".button__en").click();
-}
-$(".button__ukr").click(function () {
-    $(".button__ukr").toggleClass("current__lang");
-    $(".button__rus").removeClass("current__lang");
-    $(".button__en").removeClass("current__lang");
-    var ukrLang = document.getElementsByClassName("ukr__lang");
-    var rusLang = document.getElementsByClassName("rus__lang");
-    var enLang = document.getElementsByClassName("en__lang");
-    if ($(".button__ukr").hasClass("current__lang")) {
-        $("#name").attr("placeholder", "Iм'я");
-        $("#messege").attr("placeholder", "Повiдомлення");
-        $("#tel").attr("placeholder", "Номер телефона");
-        $("#email").attr("placeholder", "Чи email");
-    }
-    for (i = 0; i < ukrLang.length; i++) {
-        ukrLang[i].style.display = "initial";
-        rusLang[i].style.display = "none";
-        enLang[i].style.display = "none";
-    }
-});
-
-$(".button__rus").click(function () {
-    var ukrLang = document.getElementsByClassName("ukr__lang");
-    var rusLang = document.getElementsByClassName("rus__lang");
-    var enLang = document.getElementsByClassName("en__lang");
-    $(".button__ukr").removeClass("current__lang");
-    $(".button__rus").toggleClass("current__lang");
-    $(".button__en").removeClass("current__lang");
-    if ($(".button__rus").hasClass("current__lang")) {
-        $("#name").attr("placeholder", "Имя");
-        $("#messege").attr("placeholder", "Cообщение");
-        $("#tel").attr("placeholder", "Номер телефона");
-        $("#email").attr("placeholder", "Или email");
-    }
-    for (i = 0; i < rusLang.length; i++) {
-        ukrLang[i].style.display = "none";
-        rusLang[i].style.display = "initial";
-        enLang[i].style.display = "none";
-    }
-});
-
-$(".button__en").click(function () {
-    var ukrLang = document.getElementsByClassName("ukr__lang");
-    var rusLang = document.getElementsByClassName("rus__lang");
-    var enLang = document.getElementsByClassName("en__lang");
-    $(".button__ukr").removeClass("current__lang");
-    $(".button__rus").removeClass("current__lang");
-    $(".button__en").toggleClass("current__lang");
-    if ($(".button__en").hasClass("current__lang")) {
-        $("#name").attr("placeholder", "Name");
-        $("#messege").attr("placeholder", "Messages");
-        $("#tel").attr("placeholder", "Phone number");
-        $("#email").attr("placeholder", "Or email");
-    }
-    for (i = 0; i < enLang.length; i++) {
-        ukrLang[i].style.display = "none";
-        rusLang[i].style.display = "none";
-        enLang[i].style.display = " initial";
-    }
-});

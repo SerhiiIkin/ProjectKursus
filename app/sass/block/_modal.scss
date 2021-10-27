@@ -76,7 +76,6 @@
         grid-area: menu;
         justify-self: end;
         &:active {
-            background: $grey_bg_alt;
             border-radius: 12px;
             color: $main;
         }

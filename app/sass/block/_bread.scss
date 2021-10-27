@@ -4,13 +4,14 @@
     color: $white;
     position: relative;
     margin-left: 13px;
+    display: flex;
+    margin-right: 42px;
     &::before,
     &::after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 0;
         height: 24px;
-        transform: translateY(-50%);
     }
     &::before {
         background: url("../img/icons/slash_before.svg") 0 0 no-repeat;
@@ -43,3 +44,4 @@
         }
     }
 }
+
