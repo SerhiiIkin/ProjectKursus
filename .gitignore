@@ -2,7 +2,3 @@
 /node_modules
 package-lock.json
 /source
-app/rus/about__mult.html
-app/rus/publication__multi.html
-app/rus/services__mult.html
-app/rus/team__mult.html
