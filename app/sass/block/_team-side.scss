@@ -13,6 +13,13 @@
             grid-column: 2/3;
             align-self: center;
             padding-left: 20px;
+            &:hover .team-side__img {
+                color: $accent;
+            }
+            &:hover .team-side__arrow {
+                background-color: $grey_bg;
+                border-radius: 50%;
+            }
         }
     }
 

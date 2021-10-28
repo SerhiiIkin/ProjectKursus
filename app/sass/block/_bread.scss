@@ -6,6 +6,7 @@
     margin-left: 13px;
     display: flex;
     margin-right: 42px;
+    margin-top: 22px;
     &::before,
     &::after {
         content: "";
@@ -45,3 +46,8 @@
     }
 }
 
+@media (min-width: 1035px) {
+    .bread {
+        margin-top: 0;
+    }
+}

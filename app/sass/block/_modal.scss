@@ -31,11 +31,12 @@
         opacity: 0;
     }
     &__title {
-        max-width: 282px;
+        align-self: flex-start;
         color: $accent;
         font-weight: bold;
         font-size: 22px;
         line-height: 26px;
+        padding-bottom: 10px;
         &--contact {
             max-width: 100%;
         }
@@ -43,7 +44,7 @@
     &__container {
         border-radius: 12px;
         z-index: 201;
-        min-width: 335px;
+        min-width: 355px;
         padding: 20px;
         margin-top: 20px;
         left: 50%;
@@ -100,9 +101,8 @@
                 height: 2px;
                 position: absolute;
                 top: 50%;
-                left: 50%;
+                left: 70%;
                 background: $white;
-                transform: translate(-50%, -50%);
             }
             &:active::after {
                 background: $main;
