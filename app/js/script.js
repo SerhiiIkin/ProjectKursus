@@ -21,7 +21,52 @@ $(document).ready(function () {
     if ($(".modal__btn").length) {
         check();
     }
+    if ($(".publications__container-items").length) {
+        morePublication();
+    }
 });
+function conSlide() {
+    var allBtn = document.querySelectorAll(".consecutive__button");
+    var blocks = document.querySelectorAll(".consecutive__slide");
+    allBtn.forEach(onTabClick);
+    allBtn[0].click();
+    function onTabClick(item) {
+        item.addEventListener("click", function () {
+            var currentBtn = item;
+            var tabId = currentBtn.getAttribute("data-tab");
+            var currentTab = document.querySelector(tabId);
+            if (!currentBtn.classList.contains("red")) {
+                allBtn.forEach(function (item) {
+                    item.classList.remove("red");
+                });
+                blocks.forEach(function (item) {
+                    item.classList.remove("block-open");
+                });
+                currentBtn.classList.add("red");
+                currentTab.classList.add("block-open");
+            }
+        });
+    }
+}
+function morePublication() {
+    var btnPub = document.querySelector(".publications__button");
+    var allPubBloks = document.querySelectorAll(
+        ".publications__container-item"
+    );
+    var allPubItems = document.querySelectorAll(".publications__item");
+    btnPub.addEventListener("click", openPubBlocks);
+    btnPub.addEventListener("click", openItems);
+    function openItems(item) {
+        allPubItems.forEach(function (item) {
+            item.classList.remove("publications__item--comp");
+        });
+    }
+    function openPubBlocks() {
+        allPubBloks.forEach(function (item) {
+            item.classList.remove("publications__container-item--comp");
+        });
+    }
+}
 function indexSlideTop() {
     $(".consecutive-wrapper").slick({
         infinite: true,
@@ -168,28 +213,4 @@ function modal() {
     }
     openMod.addEventListener("click", openModW);
     closeMod.addEventListener("click", closeModalW);
-}
-
-function conSlide() {
-    var allBtn = document.querySelectorAll(".consecutive__button");
-    var blocks = document.querySelectorAll(".consecutive__slide");
-    allBtn.forEach(onTabClick);
-    allBtn[0].click();
-    function onTabClick(item) {
-        item.addEventListener("click", function () {
-            var currentBtn = item;
-            var tabId = currentBtn.getAttribute("data-tab");
-            var currentTab = document.querySelector(tabId);
-            if (!currentBtn.classList.contains("red")) {
-                allBtn.forEach(function (item) {
-                    item.classList.remove("red");
-                });
-                blocks.forEach(function (item) {
-                    item.classList.remove("block-open");
-                });
-                currentBtn.classList.add("red");
-                currentTab.classList.add("block-open");
-            }
-        });
-    }
 }
