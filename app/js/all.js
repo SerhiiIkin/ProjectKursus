@@ -69,6 +69,7 @@ function morePublication() {
     function openPubBlocks() {
         allPubBloks.forEach(function (item) {
             item.classList.remove("publications__container-item--comp");
+            item.classList.remove("publications__container-item--more");
         });
     }
 }
