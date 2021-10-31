@@ -41,7 +41,7 @@ body {
 
 .container {
   max-width: 1360px;
-  min-width: 350px;
+  min-width: 340px;
   margin: 0 auto;
   padding: 0 20px;
 }
