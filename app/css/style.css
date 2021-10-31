@@ -403,6 +403,7 @@ input[type="radio"].visually-hidden {
   .header__tel::before, .header__tel::after {
     content: "";
     position: absolute;
+    border-radius: 50%;
     top: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
