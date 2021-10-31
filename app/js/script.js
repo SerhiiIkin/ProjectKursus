@@ -3,17 +3,13 @@ $(document).ready(function () {
         aboutSlide();
     }
     if ($(".consecutive-wrapper").length) {
-        window.addEventListener("load", checkSizeWindow);
-        window.addEventListener("resize", checkSizeWindow);
+        indexSlideTop();
     }
     if ($(".middle-slider").length) {
         indexSlideMid();
     }
     if ($(".header__burger-menu").length) {
         menu();
-    }
-    if ($(".consecutive__button").length) {
-        conSlide();
     }
     if ($(".services__button").length) {
         modal();
@@ -24,10 +20,13 @@ $(document).ready(function () {
     if ($(".publications__container-items").length) {
         morePublication();
     }
+    if ($(".consecutive__comp-content").length) {
+        conSlide();
+    }
 });
 function conSlide() {
     var allBtn = document.querySelectorAll(".consecutive__button");
-    var blocks = document.querySelectorAll(".consecutive__slide");
+    var blocks = document.querySelectorAll(".consecutive__block--comp");
     allBtn.forEach(onTabClick);
     allBtn[0].click();
     function onTabClick(item) {
@@ -39,35 +38,18 @@ function conSlide() {
                 allBtn.forEach(function (item) {
                     item.classList.remove("red");
                 });
+                currentBtn.classList.add("red");
+            }
+            if (!currentTab.classList.contains("block-open")) {
                 blocks.forEach(function (item) {
                     item.classList.remove("block-open");
                 });
-                currentBtn.classList.add("red");
                 currentTab.classList.add("block-open");
             }
         });
     }
 }
-function morePublication() {
-    var btnPub = document.querySelector(".publications__button");
-    var allPubBloks = document.querySelectorAll(
-        ".publications__container-item"
-    );
-    var allPubItems = document.querySelectorAll(".publications__item");
-    btnPub.addEventListener("click", openPubBlocks);
-    btnPub.addEventListener("click", openItems);
-    function openItems(item) {
-        allPubItems.forEach(function (item) {
-            item.classList.remove("publications__item--comp");
-        });
-    }
-    function openPubBlocks() {
-        allPubBloks.forEach(function (item) {
-            item.classList.remove("publications__container-item--comp");
-            item.classList.remove("publications__container-item--more");
-        });
-    }
-}
+
 function indexSlideTop() {
     $(".consecutive-wrapper").slick({
         infinite: true,
@@ -79,17 +61,7 @@ function indexSlideTop() {
         dotsClass: "dots-style",
     });
 }
-function checkSizeWindow() {
-    if (window.innerWidth >= 992) {
-        destroy();
-    }
-    if (window.innerWidth < 992) {
-        indexSlideTop();
-    }
-}
-function destroy() {
-    $(".consecutive-wrapper").slick("destroy");
-}
+
 function check() {
     var mobTel = document.getElementById("tel");
     var email = document.getElementById("email");
@@ -214,4 +186,24 @@ function modal() {
     }
     openMod.addEventListener("click", openModW);
     closeMod.addEventListener("click", closeModalW);
+}
+function morePublication() {
+    var btnPub = document.querySelector(".publications__button");
+    var allPubBloks = document.querySelectorAll(
+        ".publications__container-item"
+    );
+    var allPubItems = document.querySelectorAll(".publications__item");
+    btnPub.addEventListener("click", openPubBlocks);
+    btnPub.addEventListener("click", openItems);
+    function openItems() {
+        allPubItems.forEach(function (item) {
+            item.classList.remove("publications__item--comp");
+        });
+    }
+    function openPubBlocks() {
+        allPubBloks.forEach(function (item) {
+            item.classList.remove("publications__container-item--comp");
+            item.classList.remove("publications__container-item--more");
+        });
+    }
 }
