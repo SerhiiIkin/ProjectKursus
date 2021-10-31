@@ -68,15 +68,16 @@
         &__comp {
             display: flex;
             &-buttons {
-                width: 50%;
+                flex: 0 0 50%;
                 display: flex;
+                justify-content: end;
                 flex-direction: column;
                 grid-column: 1/2;
                 grid-row: 1/2;
                 padding-left: 30px;
             }
             &-content {
-                width: 50%;
+                flex: 0 0 50%;
                 padding-right: 20px;
             }
         }
@@ -91,13 +92,9 @@
             display: none;
             align-self: center;
             padding: 0 40px;
-            grid-column: 2/3;
         }
         // .consecutive__comp
         &__slider {
-            display: grid;
-            grid-template-columns: auto auto;
-            grid-template-rows: auto;
             padding-bottom: 100px;
         }
         // .consecutive__comp-buttons
