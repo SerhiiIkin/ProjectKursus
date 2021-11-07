@@ -22,6 +22,19 @@
         background-color: #cacadb;
         bottom: -10px;
     }
+    &__bg {
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 431px;
+            height: 501px;
+            background: url("../img/icons/bg_mobile.svg") 0 0 no-repeat;
+            left: 50%;
+            top: 50%;
+            transform: translate(-66%, -23%);
+        }
+    }
 }
 
 @media (min-width: 992px) {

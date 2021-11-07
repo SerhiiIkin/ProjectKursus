@@ -19,7 +19,7 @@
         }
     }
     &__menu--whitebg {
-        a {
+        .header__menu-link {
             color: $accent_active;
             &:hover {
                 color: $accent;
