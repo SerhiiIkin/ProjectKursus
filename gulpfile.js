@@ -174,13 +174,13 @@ gulp.task(
 gulp.task("webp", function () {
     return gulp
         .src("app/img/**/*.{jpg,png}")
-        .pipe(webp({ quality: 90 }))
+        .pipe(webp({ quality: 80 }))
         .pipe(gulp.dest("app/img"));
 });
 
 gulp.task("webp-prod", function () {
     return gulp
         .src("app/img/**/*.{jpg,png}")
-        .pipe(webp({ quality: 90 }))
+        .pipe(webp({ quality: 80 }))
         .pipe(gulp.dest("dist/img"));
 });
